@@ -1,0 +1,8 @@
+ion-content{
+    --ion-background-color:#3880ff;
+}
+
+.new-background-color{
+    --color: "black";
+    --background: #a5c3f3;
+}

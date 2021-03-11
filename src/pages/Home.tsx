@@ -1,5 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonItem, IonLabel } from '@ionic/react';
 import './Tab1.css';
 
 const Home: React.FC = () => {
@@ -7,16 +6,26 @@ const Home: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Autism Treatment App</IonTitle>
+          <IonTitle>Autism Treatments</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
+            <IonTitle size="large">Home</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+        <IonList>
+          <IonItem href="/anrc">
+            <IonLabel>ANRC Guidelines for Nutritional Support</IonLabel>
+          </IonItem>
+          <IonItem href="/assmt">
+            <IonLabel>Symptom Assessments</IonLabel>
+          </IonItem>
+          <IonItem href="/add">
+            <IonLabel>Additional Information</IonLabel>
+          </IonItem>
+        </IonList>
       </IonContent>
     </IonPage>
   );

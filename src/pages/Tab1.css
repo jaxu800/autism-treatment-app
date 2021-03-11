@@ -1,0 +1,12 @@
+ion-content{
+    --ion-background-color:#3880ff;
+}
+
+.new-background-color{
+    --color: "black";
+    --background: #a5c3f3;
+}
+
+.my-label {
+    font-size: 3em;
+  }

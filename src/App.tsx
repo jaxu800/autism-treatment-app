@@ -13,6 +13,9 @@ import { medical, medkit, home } from 'ionicons/icons';
 import Home from './pages/Home';
 import Treatments from './pages/Treatments';
 import Symptoms from './pages/Symptoms';
+import AnrcGuide from './pages/AnrcGuide';
+import Assessments from './pages/Assessments';
+import Add from './pages/Add';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -46,6 +49,15 @@ const App: React.FC = () => (
           </Route>
           <Route path="/symptoms">
             <Symptoms />
+          </Route>
+          <Route exact path="/anrc">
+            <AnrcGuide />
+          </Route>
+          <Route exact path="/assmt">
+            <Assessments />
+          </Route>
+          <Route exact path="/add">
+            <Add />
           </Route>
           <Route exact path="/">
             <Redirect to="/home" />
