@@ -16,6 +16,8 @@ import Symptoms from './pages/Symptoms';
 import AnrcGuide from './pages/AnrcGuide';
 import Assessments from './pages/Assessments';
 import Add from './pages/Add';
+import TreatmentPage from './pages/TreatmentPage';
+import SymptomPage from './pages/SymptomPage';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -62,7 +64,38 @@ const App: React.FC = () => (
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
+          <Route exact path="/treatments/treatment1">
+              <TreatmentPage />
+          </Route>
+          <Route exact path="/treatments/treatment2">
+              <TreatmentPage />
+          </Route>
+          <Route exact path="/treatments/treatment3">
+              <TreatmentPage />
+          </Route>
+          <Route exact path="/treatments/treatment4">
+              <TreatmentPage />
+          </Route>
+          <Route exact path="/treatments/treatment5">
+              <TreatmentPage />
+          </Route>
+          <Route exact path="/symptoms/symptom1">
+              <SymptomPage />
+          </Route>
+          <Route exact path="/symptoms/symptom2">
+              <SymptomPage />
+          </Route>
+          <Route exact path="/symptoms/symptom3">
+              <SymptomPage />
+          </Route>
+          <Route exact path="/symptoms/symptom4">
+              <SymptomPage />
+          </Route>
+          <Route exact path="/symptoms/symptom5">
+              <SymptomPage />
+          </Route>
         </IonRouterOutlet>
+        
         <IonTabBar slot="bottom">
           <IonTabButton tab="home" href="/home">
             <IonIcon icon={home} />

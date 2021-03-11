@@ -1,0 +1,21 @@
+.treatmentcontainer {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+.treatmentcontainer strong {
+    font-size: 20px;
+    line-height: 26px;
+}
+  
+.treatmentcontainer p {
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    margin: 0;
+}
+  

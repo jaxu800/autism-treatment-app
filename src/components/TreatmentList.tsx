@@ -1,25 +1,8 @@
 import { IonItem, IonLabel, IonItemGroup, IonRouterOutlet  } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import {  Route } from 'react-router-dom';
 
 const TreatmentList: React.FC = () => {
-    return (
-        // <IonReactRouter>
-            <IonItemGroup>
-            {/* <IonRouterOutlet>
-                <Route exact path="/home">
-                    <Home />
-                </Route>
-                <Route exact path="/treatments">
-                    <Treatments />
-                </Route>
-                <Route path="/symptoms">
-                    <Symptoms />
-                </Route>
-                <Route exact path="/">
-                    <Redirect to="/home" />
-                </Route>
-        </IonRouterOutlet> */}
+    return (  
+        <IonItemGroup>
             <IonItem button href="/treatments/treatment1" onClick={() => { }} detail>
                 <IonLabel>
                     Treatment 1
@@ -45,8 +28,7 @@ const TreatmentList: React.FC = () => {
                     Treatment 5
                 </IonLabel>
             </IonItem>
-            </IonItemGroup>
-        // </IonReactRouter>
+        </IonItemGroup>
     );
   };
   
