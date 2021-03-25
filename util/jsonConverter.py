@@ -27,18 +27,37 @@ with open('nutritionData.csv', mode='r') as data_file:
                 for i in range(30, 55):
                     adverse.append(row[i])
             else:
+                #Because Firebase does not allow keys with '/' in them, we have to replace them with either a blank (in the case when its and/or), or "or", when it's just two equivalent items
+                treatmentName = row[0]
+                foundSlash = treatmentName.find("/")
+                if(foundSlash != -1):
+                    treatmentName = treatmentName.replace("/", " or ")
                 tempTreatments = {}
-                tempTreatments[f"{row[0]}"] = {}
+                tempTreatments[f"{treatmentName}"] = {}
                 for i in range(1,5):
-                    tempTreatments[f"{row[0]}"][f"{general[i-1]}"] = row[i]
+                    tempTreatments[f"{treatmentName}"][f"{general[i-1]}"] = row[i]
                 tempSymptoms = {}
-                tempSymptoms[f"{row[0]}"] = {}
+                tempSymptoms[f"{treatmentName}"] = {}
                 for i in range(5, 29):
-                    tempSymptoms[f"{row[0]}"][f"{symptoms[i-5]}"] = row[i]
+                    columnName = symptoms[i-5]
+                    indexOfSlash = columnName.find("/")
+                    if(indexOfSlash != -1):
+                        if(columnName[indexOfSlash + 1] == 'o' and columnName[indexOfSlash + 2] == 'r'):
+                            columnName = columnName.replace("/", " ")
+                        else:
+                            columnName = columnName.replace("/", " or ")
+                    tempSymptoms[f"{treatmentName}"][f"{columnName}"] = row[i]
                 tempAdverse = {}
-                tempAdverse[f"{row[0]}"] = {}
+                tempAdverse[f"{treatmentName}"] = {}
                 for i in range(30, 55):
-                    tempAdverse[f"{row[0]}"][f"{adverse[i-30]}"] = row[i]
+                    columnName = adverse[i-30]
+                    indexOfSlash = columnName.find("/")
+                    if(indexOfSlash != -1):
+                        if(columnName[indexOfSlash + 1] == 'o' and columnName[indexOfSlash + 2] == 'r'):
+                            columnName = columnName.replace("/", " ")
+                        else:
+                            columnName = columnName.replace("/", " or ")
+                    tempAdverse[f"{treatmentName}"][f"{columnName}"] = row[i]
         line_number += 1
         data_table["treatments"].update(tempTreatments)
         data_table["treatmentSymptoms"].update(tempSymptoms)
