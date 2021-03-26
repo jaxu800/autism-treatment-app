@@ -1,6 +1,7 @@
 import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
+  IonButton,
   IonIcon,
   IonLabel,
   IonRouterOutlet,
@@ -16,6 +17,8 @@ import Symptoms from './pages/Symptoms';
 import AnrcGuide from './pages/AnrcGuide';
 import Assessments from './pages/Assessments';
 import Add from './pages/Add';
+import TopTreat from './pages/TopTreat'
+import Rating from './pages/Ratings'
 import TreatmentPage from './pages/TreatmentPage';
 import SymptomPage from './pages/SymptomPage';
 
@@ -38,11 +41,13 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
+
           <Route exact path="/home">
             <Home />
           </Route>
@@ -52,6 +57,7 @@ const App: React.FC = () => (
           <Route path="/symptoms">
             <Symptoms />
           </Route>
+
           <Route exact path="/anrc">
             <AnrcGuide />
           </Route>
@@ -61,6 +67,13 @@ const App: React.FC = () => (
           <Route exact path="/add">
             <Add />
           </Route>
+          <Route exact path="/TopTreat">
+            <TopTreat />
+          </Route>
+          <Route exact path="/Ratings">
+            <Rating />
+          </Route>
+
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
@@ -79,6 +92,7 @@ const App: React.FC = () => (
           <Route exact path="/treatments/treatment5">
               <TreatmentPage />
           </Route>
+          
           <Route exact path="/symptoms/symptom1">
               <SymptomPage />
           </Route>
