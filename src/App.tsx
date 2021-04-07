@@ -47,67 +47,27 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/treatments" component={Treatments} />
+          <Route path="/symptoms" component={Symptoms} />
 
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route exact path="/treatments">
-            <Treatments />
-          </Route>
-          <Route path="/symptoms">
-            <Symptoms />
-          </Route>
+          <Route exact path="/anrc" component={AnrcGuide} />
+          <Route exact path="/assmt" component={Assessments} />       
+          <Route exact path="/add" component={Add} />
+          <Route exact path="/TopTreat" component={TopTreat}/>    
+          <Route exact path="/Ratings" component={Rating} />
 
-          <Route exact path="/anrc">
-            <AnrcGuide />
-          </Route>
-          <Route exact path="/assmt">
-            <Assessments />
-          </Route>
-          <Route exact path="/add">
-            <Add />
-          </Route>
-          <Route exact path="/TopTreat">
-            <TopTreat />
-          </Route>
-          <Route exact path="/Ratings">
-            <Rating />
-          </Route>
-
-          <Route exact path="/">
-            <Redirect to="/home" />
-          </Route>
-          <Route exact path="/treatments/treatment1">
-              <TreatmentPage />
-          </Route>
-          <Route exact path="/treatments/treatment2">
-              <TreatmentPage />
-          </Route>
-          <Route exact path="/treatments/treatment3">
-              <TreatmentPage />
-          </Route>
-          <Route exact path="/treatments/treatment4">
-              <TreatmentPage />
-          </Route>
-          <Route exact path="/treatments/treatment5">
-              <TreatmentPage />
-          </Route>
+          <Route path="/treatments/treatment1" component={TreatmentPage} />
+          <Route exact path="/treatments/treatment2" component={TreatmentPage} />
+          <Route exact path="/treatments/treatment3" component={TreatmentPage} />
+          <Route exact path="/treatments/treatment4" component={TreatmentPage} />
+          <Route exact path="/treatments/treatment5" component={TreatmentPage} />
           
-          <Route exact path="/symptoms/symptom1">
-              <SymptomPage />
-          </Route>
-          <Route exact path="/symptoms/symptom2">
-              <SymptomPage />
-          </Route>
-          <Route exact path="/symptoms/symptom3">
-              <SymptomPage />
-          </Route>
-          <Route exact path="/symptoms/symptom4">
-              <SymptomPage />
-          </Route>
-          <Route exact path="/symptoms/symptom5">
-              <SymptomPage />
-          </Route>
+          <Route exact path="/symptoms/symptom1" component={SymptomPage} />
+          <Route exact path="/symptoms/symptom2" component={SymptomPage} />
+          <Route exact path="/symptoms/symptom3" component={SymptomPage} />
+          <Route exact path="/symptoms/symptom4" component={SymptomPage} />
+          <Route exact path="/symptoms/symptom5" component={SymptomPage} />         
         </IonRouterOutlet>
         
         <IonTabBar slot="bottom">
