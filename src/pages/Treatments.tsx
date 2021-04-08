@@ -1,8 +1,9 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import TreatmentList from '../components/TreatmentList';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonButton } from '@ionic/react';
+import { RouteComponentProps } from 'react-router';
+import TreatmentList from './TreatmentList';
 import './Tab2.css';
 
-const Treatments: React.FC = () => {
+const Treatments: React.FC<RouteComponentProps> = ({history}) => {
   return (
     <IonPage>
       <IonHeader>
@@ -16,7 +17,9 @@ const Treatments: React.FC = () => {
             <IonTitle size="large">Treatments + Ratings</IonTitle>
           </IonToolbar>
         </IonHeader>
+
         <TreatmentList />
+
       </IonContent>
     </IonPage>
   );
