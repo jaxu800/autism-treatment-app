@@ -1,7 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonBackButton, IonButtons } from '@ionic/react';
 import { RouteComponentProps } from 'react-router';
 import  { HorizontalBar, Bar } from 'react-chartjs-2';
-import './Tab2.css';
+import './TreatmentPage.css';
 
 
 interface treatmentDetailsProps extends RouteComponentProps<{
