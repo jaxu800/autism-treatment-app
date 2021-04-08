@@ -19,12 +19,6 @@ const Treatments: React.FC<RouteComponentProps> = ({history}) => {
         </IonHeader>
 
         <TreatmentList />
-<<<<<<< HEAD
-        {/* //Make Firebase query in Treatments (here), get list of all treatments, send that as an array to props of TreatmentList
-        //Also send Array of arrays that has symptoms and adverse  */}
-=======
-
->>>>>>> 7f570af7be1e2b9d046d5c895ca22e25b3269c70
       </IonContent>
     </IonPage>
   );

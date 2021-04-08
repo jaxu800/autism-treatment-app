@@ -60,27 +60,9 @@ const App: React.FC = () => (
           <Route exact path="/">
             <Redirect to="/home" />
           </Route>
-<<<<<<< HEAD
-          <Route exact path="/treatments/5-HTP">
-              <TreatmentPage />
-          </Route>
-          <Route exact path="/treatments/treatment2">
-              <TreatmentPage />
-          </Route>
-          <Route exact path="/treatments/treatment3">
-              <TreatmentPage />
-          </Route>
-          <Route exact path="/treatments/treatment4">
-              <TreatmentPage />
-          </Route>
-          <Route exact path="/treatments/treatment5">
-              <TreatmentPage />
-          </Route>
-=======
 
           <Route exact path="/treatments/:temp" component={TreatmentPage} />
 
->>>>>>> 7f570af7be1e2b9d046d5c895ca22e25b3269c70
           
           <Route exact path="/symptoms/symptom1" component={SymptomPage} />
           <Route exact path="/symptoms/symptom2" component={SymptomPage} />
