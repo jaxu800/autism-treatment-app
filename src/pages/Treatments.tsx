@@ -17,6 +17,8 @@ const Treatments: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <TreatmentList />
+        {/* //Make Firebase query in Treatments (here), get list of all treatments, send that as an array to props of TreatmentList
+        //Also send Array of arrays that has symptoms and adverse  */}
       </IonContent>
     </IonPage>
   );

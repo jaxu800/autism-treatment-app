@@ -1,7 +1,8 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel } from '@ionic/react';
 import TreatmentContainer from '../components/TreatmentContainer';
+import './TreatmentPage.css'
 
-const TreatmentPage: React.FC = () => {
+const TreatmentPage: React.FC = (props) => {
   return (
     <IonPage>
       <IonHeader>

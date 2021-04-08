@@ -1,11 +1,12 @@
 import { IonItem, IonLabel, IonItemGroup, IonRouterOutlet  } from '@ionic/react';
 
-const TreatmentList: React.FC = () => {
+const TreatmentList: React.FC = (props) => {
     return (  
         <IonItemGroup>
-            <IonItem button href="/treatments/treatment1" onClick={() => { }} detail>
+            {/* //For each button,  */}
+            <IonItem button href="/treatments/5-HTP" onClick={() => { }} detail>
                 <IonLabel>
-                    Treatment 1
+                    5-HTP
                 </IonLabel>
             </IonItem>
             <IonItem button href="/treatments/treatment2" onClick={() => { }} detail>
