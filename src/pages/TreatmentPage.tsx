@@ -34,7 +34,7 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
     title: {
       display: true,
       fontSize: 15,
-      text: '5-HTP Symptom Benefits'
+      text: `${match.params.temp} Symptom Benefits`
     },
     maintainAspectRatio: false,
   };
@@ -54,7 +54,7 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
     title: {
       display: true,
       fontSize: 15,
-      text: '5-HTP Adverse Effects'
+      text: `${match.params.temp} Adverse Effects`
     },
     maintainAspectRatio: false,
     scales: {
@@ -65,6 +65,27 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
         }
       }]
     }
+  };
+  const generalData = {
+    labels: ['Overall Benefit', 'Overall Adverse', ],  
+    datasets: [
+      {
+        label: 'Rating',
+        backgroundColor: repeatedArray,
+        borderColor: repeatedArray,
+        borderWidth: 2,
+        data: [1.8, 0.1]
+      }
+    ]
+  };
+  const generalOptions = {
+    title: {
+      display: true,
+      fontSize: 15,
+      text: `${match.params.temp} Overviews`
+    },
+    maintainAspectRatio: false,
+
   };
   return (
     <IonPage>
@@ -79,9 +100,12 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
       <IonContent fullscreen>
       <>
         <div className="container">
+          <Bar data={generalData} options={generalOptions}></Bar>
+        </div>
+        <div className="container">
         <HorizontalBar data={symptomsData} options={symptomsOptions}></HorizontalBar>
         </div>  
-        <div className="container2">
+        <div className="container">
         <HorizontalBar data={adverseData} options={adverseOptions}></HorizontalBar>
         </div>
         </>
