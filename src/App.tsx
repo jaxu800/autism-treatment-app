@@ -57,11 +57,16 @@ const App: React.FC = () => (
           <Route exact path="/TopTreat" component={TopTreat}/>    
           <Route exact path="/Ratings" component={Rating} />
 
-          <Route path="/treatments/treatment1" component={TreatmentPage} />
-          <Route exact path="/treatments/treatment2" component={TreatmentPage} />
-          <Route exact path="/treatments/treatment3" component={TreatmentPage} />
-          <Route exact path="/treatments/treatment4" component={TreatmentPage} />
-          <Route exact path="/treatments/treatment5" component={TreatmentPage} />
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
+
+          <Route exact path="/treatments/treatment/:temp" component={TreatmentPage} />
+          <Route exact path="/treatments/treatment/:temp" component={TreatmentPage} />
+          <Route exact path="/treatments/treatment/:temp" component={TreatmentPage} />
+          <Route exact path="/treatments/treatment/:temp" component={TreatmentPage} />
+          <Route exact path="/treatments/treatment/:temp" component={TreatmentPage} />
+
           
           <Route exact path="/symptoms/symptom1" component={SymptomPage} />
           <Route exact path="/symptoms/symptom2" component={SymptomPage} />
@@ -90,3 +95,4 @@ const App: React.FC = () => (
 );
 
 export default App;
+
