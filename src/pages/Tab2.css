@@ -3,6 +3,33 @@ ion-content{
 }
 
 .new-background-color{
+<<<<<<< HEAD
     --color: #adcbe3;
     --background: #e7eff6;
 }
+=======
+    --color: "black";
+    --background: #a5c3f3;
+}
+.treatmentcontainer {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+.treatmentcontainer strong {
+    font-size: 20px;
+    line-height: 26px;
+}
+  
+.treatmentcontainer p {
+    font-size: 16px;
+    line-height: 22px;
+    color: white;
+    margin: 0;
+}
+  
+>>>>>>> 66df643a2bc346c9d6abd99a5581c13028853c72

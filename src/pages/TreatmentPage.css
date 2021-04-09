@@ -1,0 +1,9 @@
+ion-content{
+    --ion-background-color: white;
+}
+
+.container {
+    margin: auto;
+    height: 400px;
+    width: auto;
+}
