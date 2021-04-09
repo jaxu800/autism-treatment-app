@@ -13,7 +13,7 @@ const Add: React.FC = () => {
 
       <IonHeader>
         <IonToolbar className="new-background-color">
-          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 24}}>Additional Information</IonTitle>
+          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 23}}>Additional Information</IonTitle>
         </IonToolbar>
       </IonHeader>
       

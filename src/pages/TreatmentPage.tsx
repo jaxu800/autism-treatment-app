@@ -90,46 +90,31 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
   return (
     <IonPage>
       <IonHeader>
-<<<<<<< HEAD
-        <IonToolbar className="new-background-color" style={{height: '36px'}}>
+	    <IonToolbar className="new-background-color" style={{height: '36px'}}>
+          <IonButtons slot="start">
+            <IonBackButton />
+          </IonButtons>
           <IonTitle style={{color: '#E7EFF6', fontSize: 12}}>Autism Treatments</IonTitle>
         </IonToolbar>
       </IonHeader>
-
-      <IonHeader>
+	  <IonHeader>
         <IonToolbar className="new-background-color">
-          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 30}}>Treatment X</IonTitle>
+          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 30}}>{match.params.temp}</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent fullscreen className="new-background-color-2">
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Treatment X</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <TreatmentContainer />
-=======
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonBackButton />
-          </IonButtons>
-          <IonTitle>{match.params.temp}</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-      <>
-        <div className="container">
-          <Bar data={generalData} options={generalOptions}></Bar>
-        </div>
-        <div className="container">
-        <HorizontalBar data={symptomsData} options={symptomsOptions}></HorizontalBar>
-        </div>  
-        <div className="container">
-        <HorizontalBar data={adverseData} options={adverseOptions}></HorizontalBar>
-        </div>
+        <>
+		  <div className="container">
+			<Bar data={generalData} options={generalOptions}></Bar>
+          </div>
+          <div className="container">
+			<HorizontalBar data={symptomsData} options={symptomsOptions}></HorizontalBar>
+          </div>  
+          <div className="container">
+			<HorizontalBar data={adverseData} options={adverseOptions}></HorizontalBar>
+          </div>
         </>
->>>>>>> 66df643a2bc346c9d6abd99a5581c13028853c72
       </IonContent>
     </IonPage>
   );
