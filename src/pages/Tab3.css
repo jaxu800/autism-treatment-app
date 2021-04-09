@@ -1,8 +1,16 @@
 ion-content{
-    --ion-background-color:#3880ff;
+    --ion-background-color:#e7eff6;
 }
 
 .new-background-color{
-    --color: "black";
-    --background: #a5c3f3;
+    --color: "e7eff6";
+    --background: #2A4D69;
+}
+
+.new-background-color-1{
+    --background: #adcbe3;
+}
+
+.new-background-color-2{
+    --background: #e7eff6;
 }

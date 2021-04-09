@@ -6,11 +6,18 @@ const Symptoms: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Treatments for Symptoms</IonTitle>
+        <IonToolbar className="new-background-color" style={{height: '36px'}}>
+          <IonTitle style={{color: '#E7EFF6', fontSize: 12}}>Autism Treatments</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+
+      <IonHeader>
+        <IonToolbar className="new-background-color">
+          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 36}}>Symptoms</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+
+      <IonContent fullscreen className="new-background-color-2">
         <IonHeader collapse="condense">
           <IonToolbar>
             <IonTitle size="large">Treatments for Symptoms</IonTitle>

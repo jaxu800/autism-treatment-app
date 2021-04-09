@@ -76,7 +76,7 @@ const App: React.FC = () => (
             <IonLabel>Home</IonLabel>
           </IonTabButton>
           <IonTabButton tab="treatments" href="/treatments">
-            <IonIcon icon={medical} />
+            <IonIcon icon={medical}/>
             <IonLabel>Treatments</IonLabel>
           </IonTabButton>
           <IonTabButton tab="symptoms" href="/symptoms">
