@@ -1,7 +1,7 @@
 import { IonItem, IonLabel, IonItemGroup, IonRouterOutlet  } from '@ionic/react';
 
-const TreatmentList: React.FC = (props) => {
-    var treatments = ["Treatment 1", "Treatment 2", "Treatment 3", "Treatment 4"];
+const TreatmentList: React.FC = () => {
+    var treatments = ["5-HTP", "Biotin", "Blend of Amino Acids", "Calcium", "Carntine", "Chromium", "CoQ10", "Cod Liver Oil", "DMG", "Glutamine", "Iron", "Iodine", "Melatonin", "Omega 3", "Potassium", "Taurine", "Vitamin D", "Zinc"];
     return ( 
       <IonItemGroup>
         {

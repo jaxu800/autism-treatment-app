@@ -19,14 +19,14 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
     'rgba(255, 99, 132, 0.2)',
   ],));
   const symptomsData = {
-    labels: ['Aggression or Agitation', 'Anxiety', 'Attention', 'Cognition (ability to think)', 'Constipation', 'Depression', 'Diarrhea', 'Eczema or Skin Problem', 'General benefit, no one particular symptom', 'Health (fewer illnesses and or less severe illnesses)', 'Hyperactivity', 'Irritability', 'Language or Communication', 'Lethargy (easily tired)', 'OCD', 'Reflux or Vomiting', 'Seizures', 'Self-Injury', 'Sensory Sensitivity', 'Sleep (falling asleep)', 'Sleep (staying asleep)', 'Social Interaction and Understanding', 'Stimming or Perseveration or Desire for Sameness', 'Tics or Abnormal movements'],
+    labels: ['Aggression', 'Anxiety', 'Attention', 'Cognition', 'Communication','Constipation', 'Depression', 'Diarrhea', 'Falling Asleep', 'General', 'Health', 'Hyperactivity', 'Irritability', 'Lethargy', 'OCD', 'Reflux', 'Seizures', 'Self-Injury', 'Sensory', 'Skin Problem', 'Social', 'Staying Asleep', 'Stimming', 'Tics'],
     datasets: [
       {
-        label: 'Percent Benefit',
+        label: 'Percent Who Benefit',
         backgroundColor: repeatedArray,
         borderColor: repeatedArray,
         borderWidth: 2,
-        data: [9, 11, 2, 2, 0, 4, 0, 0, 27, 2, 0, 7, 2, 2, 2, 0, 0, 0, 0, 36, 27, 2, 2, 0]
+        data: [9, 11, 2, 2, 2, 0, 4, 0, 36, 27, 2, 0, 7, 2, 2, 0, 0, 0, 0, 0, 2, 27, 2, 2, 0]
       }
     ]
   };
@@ -37,12 +37,27 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
       text: `${match.params.temp} Symptom Benefits`
     },
     maintainAspectRatio: false,
+    scales: {
+      xAxes: [{
+        scaleLabel: {
+          display: true, 
+          labelString: 'Percent Who Benefit'
+        },
+        ticks: {
+          min: 0,
+          max: 60,
+          callback: function(value:any) {
+            return value + "%"
+          }
+        }
+      }]
+    }
   };
   const adverseData = {
-    labels: ['Aggression or Agitation', 'Anxiety', 'Bedwetting or Bladder Control', 'Behavior problems', 'Decreased cognition (difficulty thinking or remembering)', 'Depression', 'Dizziness or Unsteadiness', 'Dry mouth', 'Fatigue or Drowsiness', 'Gastrointestinal problems', 'General worsening, no one specific symptom', 'Headache or Migraine', 'Hyperactivity', 'Irritability', 'Liver or Kidney problem', 'Loss of appetite', 'Nausesa', 'Rash', 'Seizures', 'Self-injury', 'Sleep Problems', 'Stimming or Perseveration or Desire for Sameness', 'Tics or Abnormal movements', 'Weight gain', 'Weight loss'],  
+    labels: ['Aggression', 'Anxiety', 'Behavior', 'Bladder', 'Cognition', 'Depression', 'Dizziness', 'Dry mouth', 'Fatigue', 'Gastrointestinal', 'General', 'Headache', 'Hyperactivity', 'Irritability', 'Liver & Kidney', 'Loss of appetite', 'Nausesa', 'Rash', 'Seizures', 'Self-injury', 'Sleep', 'Stimming', 'Tics', 'Weight gain', 'Weight loss'],  
     datasets: [
       {
-        label: 'Percent Adverse',
+        label: '% Who Have Adverse Effects',
         backgroundColor: repeatedArray,
         borderColor: repeatedArray,
         borderWidth: 2,
@@ -59,9 +74,16 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
     maintainAspectRatio: false,
     scales: {
       xAxes: [{
+        scaleLabel: {
+          display: true, 
+          labelString: '% Who Have Adverse Effects'
+        },
         ticks: {
           min: 0,
-          max: 15
+          max: 30,
+          callback: function(value:any) {
+            return value + "%"
+          }
         }
       }]
     }
@@ -85,6 +107,14 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
       text: `${match.params.temp} Overviews`
     },
     maintainAspectRatio: false,
+    scales: {
+      yAxes: [{
+        ticks: {
+          min: 0,
+          max: 3,
+        }
+      }]
+    }
 
   };
   return (
