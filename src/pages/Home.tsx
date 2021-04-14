@@ -13,14 +13,8 @@ const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar className="new-background-color" style={{height: '36px'}}>
-          <IonTitle style={{color: '#E7EFF6', fontSize: 12}}>Autism Treatments</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-
-      <IonHeader>
         <IonToolbar className="new-background-color">
-          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 36}}>Home</IonTitle>
+          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 24, height: '65px'}}>Autism Treatments</IonTitle>
         </IonToolbar>
       </IonHeader>
 
