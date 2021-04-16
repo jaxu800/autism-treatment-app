@@ -63,12 +63,10 @@ const App: React.FC = () => (
 
           <Route exact path="/treatments/:temp" component={TreatmentPage} />
 
+          <Route exact path="/symptoms/:temp" component={SymptomPage} />
+
           
-          <Route exact path="/symptoms/symptom1" component={SymptomPage} />
-          <Route exact path="/symptoms/symptom2" component={SymptomPage} />
-          <Route exact path="/symptoms/symptom3" component={SymptomPage} />
-          <Route exact path="/symptoms/symptom4" component={SymptomPage} />
-          <Route exact path="/symptoms/symptom5" component={SymptomPage} />         
+                   
         </IonRouterOutlet>
         
         <IonTabBar slot="bottom">
