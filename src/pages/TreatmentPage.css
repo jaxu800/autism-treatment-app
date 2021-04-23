@@ -2,8 +2,31 @@ ion-content{
     --ion-background-color: white;
 }
 
+.starDiv {
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
 .container {
     margin: auto;
     height: 400px;
     width: auto;
+}
+
+p {
+    font-family: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+    font-size: 12;
+    line-height: 1.2;
+    color: rgb(102,102,102);
+}
+
+h1 {
+    font-family: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+    line-height: 1.2;
+    color: rgb(102,102,102);
+}
+
+.starRating {
+    margin: auto;
 }

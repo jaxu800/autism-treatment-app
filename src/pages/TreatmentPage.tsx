@@ -1,6 +1,8 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonBackButton, IonButtons } from '@ionic/react';
 import { RouteComponentProps } from 'react-router';
 import  { HorizontalBar, Bar } from 'react-chartjs-2';
+// @ts-ignore
+import StarRatings from 'react-star-ratings';
 import './TreatmentPage.css';
 
 
@@ -18,11 +20,17 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
     'rgba(255, 159, 64, 0.2)',
     'rgba(255, 99, 132, 0.2)',
   ],));
+  var overallData = [1.8, 0.1];
+  var rating = (overallData[0] - overallData[1]) * 2;
+  if(rating < 0) {
+    rating = 0;
+  }
+  var analysis = "Good";
   const symptomsData = {
     labels: ['Aggression', 'Anxiety', 'Attention', 'Cognition', 'Communication','Constipation', 'Depression', 'Diarrhea', 'Falling Asleep', 'General', 'Health', 'Hyperactivity', 'Irritability', 'Lethargy', 'OCD', 'Reflux', 'Seizures', 'Self-Injury', 'Sensory', 'Skin Problem', 'Social', 'Staying Asleep', 'Stimming', 'Tics'],
     datasets: [
       {
-        label: 'Percent Who Benefit',
+        label: '% Who Benefit',
         backgroundColor: repeatedArray,
         borderColor: repeatedArray,
         borderWidth: 2,
@@ -36,12 +44,15 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
       fontSize: 15,
       text: `${match.params.temp} Symptom Benefits`
     },
+    legend: {
+      display: false
+    },
     maintainAspectRatio: false,
     scales: {
       xAxes: [{
         scaleLabel: {
           display: true, 
-          labelString: 'Percent Who Benefit'
+          labelString: '% Who Benefit'
         },
         ticks: {
           min: 0,
@@ -57,7 +68,7 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
     labels: ['Aggression', 'Anxiety', 'Behavior', 'Bladder', 'Cognition', 'Depression', 'Dizziness', 'Dry mouth', 'Fatigue', 'Gastrointestinal', 'General', 'Headache', 'Hyperactivity', 'Irritability', 'Liver & Kidney', 'Loss of appetite', 'Nausesa', 'Rash', 'Seizures', 'Self-injury', 'Sleep', 'Stimming', 'Tics', 'Weight gain', 'Weight loss'],  
     datasets: [
       {
-        label: '% Who Have Adverse Effects',
+        label: '% With Adverse Effects',
         backgroundColor: repeatedArray,
         borderColor: repeatedArray,
         borderWidth: 2,
@@ -71,12 +82,15 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
       fontSize: 15,
       text: `${match.params.temp} Adverse Effects`
     },
+    legend: {
+      display: false,
+    },
     maintainAspectRatio: false,
     scales: {
       xAxes: [{
         scaleLabel: {
           display: true, 
-          labelString: '% Who Have Adverse Effects'
+          labelString: '% With Adverse Effects'
         },
         ticks: {
           min: 0,
@@ -96,7 +110,7 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
         backgroundColor: repeatedArray,
         borderColor: repeatedArray,
         borderWidth: 2,
-        data: [1.8, 0.1]
+        data: overallData
       }
     ]
   };
@@ -104,7 +118,10 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
     title: {
       display: true,
       fontSize: 15,
-      text: `${match.params.temp} Overviews`
+      text: `Benefit vs. Adverse`
+    },
+    legend: {
+      display: false
     },
     maintainAspectRatio: false,
     scales: {
@@ -129,12 +146,19 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
       </IonHeader>
 	  <IonHeader>
         <IonToolbar className="new-background-color">
-          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 30}}>{match.params.temp}</IonTitle>
+          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 30}}>Treatment Page</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent fullscreen className="new-background-color-2">
         <>
+      <div className="starDiv">
+        <h1>{match.params.temp}</h1>
+        <p><strong>Overall Rating: {analysis}</strong></p>
+        <StarRatings className="starRating" rating={rating} numberOfStars={5} starDimension="20px" starRatedColor="gold"/>
+        <p><strong>{rating} out of 5</strong></p>  
+        <p>Rated by: 150 people</p>
+      </div>
 		  <div className="container">
 			<Bar data={generalData} options={generalOptions}></Bar>
           </div>
