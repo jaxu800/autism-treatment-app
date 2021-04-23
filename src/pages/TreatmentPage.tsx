@@ -153,19 +153,22 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
     <IonPage>
 	  <IonHeader>
         <IonToolbar className="new-background-color">
-          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 30, height: '65px'}}>{match.params.temp}</IonTitle>
+          <IonButtons  slot="start">
+			<IonBackButton  style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
+          </IonButtons>
+		  <IonTitle style={{padding: '0px', color: 'var(--light-blue-1)', textAlign: "left", fontSize: 22, height: '65px'}}>Treatment Details</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent fullscreen className="new-background-color-2">
         <>
-      <div className="starDiv">
-        <h1>{match.params.temp}</h1>
-        <p><strong>Overall Rating: {analysis}</strong></p>
-        <StarRatings className="starRating" rating={rating} numberOfStars={5} starDimension="20px" starRatedColor="gold"/>
-        <p><strong>{rating} out of 5</strong></p>  
-        <p>Rated by: 150 people</p>
-      </div>
+          <div className="starDiv" style={{padding: '5px'}}>
+			<h1 style={{color: 'black', fontWeight: 'bold', fontFamily: 'sans-serif'}}>{match.params.temp}</h1>
+			<p style={{fontFamily: 'sans-serif'}}>Overall Rating: <strong>{analysis}</strong></p>
+			<StarRatings className="starRating" rating={rating} numberOfStars={5} starDimension="20px" starRatedColor="gold"/>
+			<p style={{fontFamily: 'sans-serif'}}><strong>{rating}</strong> out of 5</p>  
+			<p style={{fontFamily: 'sans-serif'}}>Rated by: 150 people</p>
+          </div>
 		  <div className="container">
 			<Bar data={generalData} options={generalOptions}></Bar>
           </div>
