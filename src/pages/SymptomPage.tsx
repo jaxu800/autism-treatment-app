@@ -22,7 +22,7 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({match, history}) => {
       <IonContent fullscreen className="new-background-color-2">
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Symptom {match.params.temp}</IonTitle>
+            <IonTitle size="large">Symptom: {match.params.temp}</IonTitle>
           </IonToolbar>
         </IonHeader>
         <SymptomContainer />
