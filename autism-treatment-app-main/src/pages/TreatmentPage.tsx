@@ -136,17 +136,13 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
   };
   return (
     <IonPage>
-      <IonHeader>
-	    <IonToolbar className="new-background-color" style={{height: '36px'}}>
-          <IonButtons slot="start">
-            <IonBackButton />
-          </IonButtons>
-          <IonTitle style={{color: '#E7EFF6', fontSize: 12}}>Autism Treatments</IonTitle>
-        </IonToolbar>
-      </IonHeader>
 	  <IonHeader>
         <IonToolbar className="new-background-color">
+<<<<<<< HEAD:src/pages/TreatmentPage.tsx
           <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 30}}>Treatment Page</IonTitle>
+=======
+          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 30, height: '65px'}}>{match.params.temp}</IonTitle>
+>>>>>>> b3a4c1319713636f1dcb08502bac8d58fbc790f3:autism-treatment-app-main/src/pages/TreatmentPage.tsx
         </IonToolbar>
       </IonHeader>
 

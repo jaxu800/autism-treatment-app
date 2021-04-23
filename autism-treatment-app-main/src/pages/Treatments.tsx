@@ -7,14 +7,8 @@ const Treatments: React.FC<RouteComponentProps> = ({history}) => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar className="new-background-color" style={{height: '36px'}}>
-          <IonTitle style={{color: '#E7EFF6', fontSize: 12}}>Autism Treatments</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-
-      <IonHeader>
         <IonToolbar className="new-background-color">
-          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 24}}>Treatment Options</IonTitle>
+          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 24, height: '65px'}}>Treatment Options</IonTitle>
         </IonToolbar>
       </IonHeader>
       
