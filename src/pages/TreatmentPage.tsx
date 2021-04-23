@@ -25,7 +25,22 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
   if(rating < 0) {
     rating = 0;
   }
-  var analysis = "Good";
+  var analysis = "";
+  if(rating >=0 && rating <= 1) {
+    analysis = "Poor";
+  }
+  else if(rating > 1 && rating <= 2) {
+    analysis = "Fair";
+  }
+  else if(rating > 2 && rating <=3) {
+    analysis = "Good";
+  }
+  else if(rating > 3 && rating <=4) {
+    analysis = "Very Good";
+  }
+  else if(rating > 4 && rating <=5) {
+    analysis = "Excellent"
+  }
   const symptomsData = {
     labels: ['Aggression', 'Anxiety', 'Attention', 'Cognition', 'Communication','Constipation', 'Depression', 'Diarrhea', 'Falling Asleep', 'General', 'Health', 'Hyperactivity', 'Irritability', 'Lethargy', 'OCD', 'Reflux', 'Seizures', 'Self-Injury', 'Sensory', 'Skin Problem', 'Social', 'Staying Asleep', 'Stimming', 'Tics'],
     datasets: [
@@ -65,7 +80,7 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
     }
   };
   const adverseData = {
-    labels: ['Aggression', 'Anxiety', 'Behavior', 'Bladder', 'Cognition', 'Depression', 'Dizziness', 'Dry mouth', 'Fatigue', 'Gastrointestinal', 'General', 'Headache', 'Hyperactivity', 'Irritability', 'Liver & Kidney', 'Loss of appetite', 'Nausesa', 'Rash', 'Seizures', 'Self-injury', 'Sleep', 'Stimming', 'Tics', 'Weight gain', 'Weight loss'],  
+    labels: ['Aggression', 'Anxiety', 'Behavior', 'Bladder', 'Cognition', 'Depression', 'Dizziness', 'Dry mouth', 'Fatigue', 'Gastrointestinal', 'General', 'Headache', 'Hyperactivity', 'Irritability', 'Liver & Kidney', 'Loss of appetite', 'Nausea', 'Rash', 'Seizures', 'Self-injury', 'Sleep', 'Stimming', 'Tics', 'Weight gain', 'Weight loss'],  
     datasets: [
       {
         label: '% With Adverse Effects',

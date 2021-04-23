@@ -1,7 +1,7 @@
 import { IonItem, IonLabel, IonItemGroup } from '@ionic/react';
 
 const SymptomList: React.FC = () => {
-    var symptoms = ["Aggression", "Anxiety", "Attention", "Cognition", "Communication"];
+    var symptoms = ["Aggression", "Anxiety", "Attention", "Cognition", "Communication", "Irritability" ];
     return (
         <IonItemGroup>
         {
