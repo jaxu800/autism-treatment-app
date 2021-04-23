@@ -1,5 +1,5 @@
 import React from "react";
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonBackButton } from '@ionic/react';
 import './Add.css';
 
 const Add: React.FC = () => {
@@ -7,7 +7,10 @@ const Add: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar className="new-background-color">
-          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 23, height: '65px'}}>Additional Information</IonTitle>
+		  <IonButtons  slot="start">
+			<IonBackButton  style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
+          </IonButtons>
+		  <IonTitle style={{padding: '0px', color: 'var(--light-blue-1)', textAlign: "left", fontSize: 18, height: '65px'}}>Additional Information</IonTitle>
         </IonToolbar>
       </IonHeader>
       

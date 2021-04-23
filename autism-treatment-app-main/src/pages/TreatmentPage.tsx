@@ -121,11 +121,17 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
     <IonPage>
 	  <IonHeader>
         <IonToolbar className="new-background-color">
-          <IonTitle style={{color: '#E7EFF6', textAlign: "center", fontSize: 30, height: '65px'}}>{match.params.temp}</IonTitle>
+          <IonButtons  slot="start">
+			<IonBackButton  style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
+          </IonButtons>
+		  <IonTitle style={{padding: '0px', color: 'var(--light-blue-1)', textAlign: "left", fontSize: 22, height: '65px'}}>Treatment Details</IonTitle>
         </IonToolbar>
       </IonHeader>
 
       <IonContent fullscreen className="new-background-color-2">
+	    <IonToolbar className="new-background-color-2">
+		  <IonTitle style={{textAlign: "center", fontWeight: 'bold'}}>{match.params.temp}</IonTitle>
+		</IonToolbar>
         <>
 		  <div className="container">
 			<Bar data={generalData} options={generalOptions}></Bar>

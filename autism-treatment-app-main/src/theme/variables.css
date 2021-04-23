@@ -3,6 +3,14 @@ http://ionicframework.com/docs/theming/ */
 
 /** Ionic CSS Variables **/
 :root {
+  /** my variables **/
+  --light-blue-1: #E7EFF6;
+  --light-blue-2: #ADCBE3;
+  --dark-blue-1: #2A4D69;
+  --dark-blue-2: #4B86B4;
+  --mid-blue: #63ACE5;
+  --dark-gray: #555555;
+
   /** primary **/
   --ion-color-primary: #63ACE5;
   --ion-color-primary-rgb: 56, 128, 255;
