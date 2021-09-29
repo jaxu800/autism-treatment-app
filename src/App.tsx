@@ -39,7 +39,7 @@ import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
 
 /* Theme variables */
-import './theme/variables.css';
+import './pages/Tab1.css';
 
 
 const App: React.FC = () => (
