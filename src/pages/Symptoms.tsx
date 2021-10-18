@@ -7,10 +7,7 @@ const Symptoms: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar className="new-background-color">
-          <IonButtons  slot="start">
-	          <IonBackButton style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
-          </IonButtons>
-	        <IonTitle style={{padding: '2px', color: 'var(--light-blue-1)', textAlign: "left", fontSize: 24, height: '65px'}}>Symptoms</IonTitle>
+	        <IonTitle style={{padding: '2px', color: 'var(--light-blue-1)', textAlign: "center", fontSize: 24, height: '65px'}}>Symptoms</IonTitle>
         </IonToolbar>
       </IonHeader>
 
