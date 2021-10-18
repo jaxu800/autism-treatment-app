@@ -7,7 +7,7 @@ const TreatmentList: React.FC = () => {
         {
           treatments.map(elem => {
             return(
-              <IonItem className="new-background-color-2" button href={"treatments/" + elem} onClick={() => {}} detail>
+              <IonItem className="new-background-color-3" button href={"treatments/" + elem} onClick={() => {}} detail>
                 <IonLabel>
                   {elem}
                 </IonLabel>

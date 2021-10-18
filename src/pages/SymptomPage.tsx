@@ -13,9 +13,9 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({match, history}) => {
       <IonHeader>
         <IonToolbar className="new-background-color">
           <IonButtons  slot="start">
-			<IonBackButton  style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
+			<IonBackButton defaultHref="/symptoms" style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
           </IonButtons>
-		  <IonTitle style={{padding: '8px', color: 'var(--light-blue-1)', textAlign: "left", fontSize: 30, height: '65px'}}>Symptom {match.params.temp}</IonTitle>
+		  <IonTitle style={{padding: '8px', color: 'var(--light-blue-1)', textAlign: "left", fontSize: 22, height: '65px'}}>Symptom Details</IonTitle>
         </IonToolbar>
       </IonHeader>
 

@@ -1,5 +1,5 @@
 import './SymptomContainer.css';
-
+import { IonItem, IonLabel, IonItemGroup, IonRouterOutlet  } from '@ionic/react';
 
 const SymptomContainer: React.FC = () => {
   return (
@@ -7,6 +7,7 @@ const SymptomContainer: React.FC = () => {
       <strong>Symptom Page</strong>
       <p>Graph Goes Here</p>
     </div>
+
   );
 };
 
