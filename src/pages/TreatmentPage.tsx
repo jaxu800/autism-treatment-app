@@ -163,7 +163,7 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
       <IonContent fullscreen className="new-background-color-2">
         <>
           <div className="starDiv" style={{padding: '5px'}}>
-			<h1 style={{color: 'black', fontWeight: 'bold', fontFamily: 'sans-serif'}}>{match.params.temp}</h1>
+			<h1 style={{color: 'black', fontWeight: 'bold', fontFamily: 'sans-serif'}}> fdsf{match.params.temp}</h1>
 			<p style={{fontFamily: 'sans-serif'}}>Overall Rating: <strong>{analysis}</strong></p>
 			<StarRatings className="starRating" rating={rating} numberOfStars={5} starDimension="20px" starRatedColor="gold"/>
 			<p style={{fontFamily: 'sans-serif'}}><strong>{rating}</strong> out of 5</p>  
