@@ -1,6 +1,7 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonBackButton, IonMenu, IonSelect, IonSelectOption, IonList, IonLabel, IonItem } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonBackButton, IonButton, IonIcon, IonMenu, IonSelect, IonSelectOption, IonList, IonLabel, IonItem } from '@ionic/react';
 import SymptomList from '../components/SymptomList';
 import './Tab3.css';
+import {star} from 'ionicons/icons';
 
 const Symptoms: React.FC = () => {
   return (
@@ -8,9 +9,12 @@ const Symptoms: React.FC = () => {
       <IonHeader>
         <IonToolbar className="new-background-color">
           <IonButtons  slot="start">
-	          <IonBackButton style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
+	          <IonBackButton defaultHref="/home" style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
           </IonButtons>
 	        <IonTitle style={{padding: '2px', color: 'var(--light-blue-1)', textAlign: "left", fontSize: 24, height: '65px'}}>Symptoms</IonTitle>
+          <IonButton slot="end" color="dark-blue-1" fill="clear">
+            <IonIcon slot="icon-only" icon={star} color="light-blue-1" />
+          </IonButton>
         </IonToolbar>
       </IonHeader>
 

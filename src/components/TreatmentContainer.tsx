@@ -1,4 +1,5 @@
 import './SymptomContainer.css';
+import { IonItem, IonLabel, IonItemGroup, IonRouterOutlet } from '@ionic/react';
 
 
 const SymptomContainer: React.FC = () => {
