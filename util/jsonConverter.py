@@ -3,7 +3,7 @@ import csv
 
 data_table = {}
 
-with open('nutritionData.csv', mode='r') as data_file:
+with open('fullData.csv', mode='r') as data_file:
     csv_reader = csv.reader(data_file, delimiter=',')
     line_number = 0
     symptoms =  []
@@ -64,6 +64,6 @@ with open('nutritionData.csv', mode='r') as data_file:
         data_table["treatmentAdverse"].update(tempAdverse)
 
 json_data = json.dumps(data_table, indent=4)
-with open('nutritionData.json', 'w') as outfile:
+with open('fullData.json', 'w') as outfile:
     outfile.write(json_data)
     outfile.close()
