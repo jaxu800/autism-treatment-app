@@ -57,7 +57,7 @@ const SymptomContainer: React.FC = () => {
 
 
   return (
-    <IonContent className="new-background-color-1">
+    <IonContent className="new-background-color-2">
       <>
         <div className="symptomcontainer">
           <strong>Symptom Page</strong>
@@ -65,7 +65,7 @@ const SymptomContainer: React.FC = () => {
         </div>
 
 
-        <IonTitle style={{padding: '10px', fontSize: '16'}}>
+        <IonTitle style={{padding: '10px', fontSize: 18, fontWeight: 'bold'}}>
           Recomended Treatments
         </IonTitle>
 
@@ -73,7 +73,7 @@ const SymptomContainer: React.FC = () => {
         {
           treatments.map(elem => {
             return(
-              <IonItem className="new-background-color-3" button href={"treatments/" + elem} onClick={() => {}} detail>
+              <IonItem className="new-background-color-2" button href={"treatments/" + elem} onClick={() => {}} detail>
                 <IonLabel>
                   {elem}
                 </IonLabel>
