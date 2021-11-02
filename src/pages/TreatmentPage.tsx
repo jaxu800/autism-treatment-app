@@ -1,6 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonBackButton, IonButtons } from '@ionic/react';
 import { RouteComponentProps } from 'react-router';
 import  { HorizontalBar, Bar } from 'react-chartjs-2';
+import { getDatabase, ref, onValue } from 'firebase/database'
 // @ts-ignore
 import StarRatings from 'react-star-ratings';
 import './TreatmentPage.css';
@@ -11,6 +12,22 @@ interface treatmentDetailsProps extends RouteComponentProps<{
 }> {}
 
 const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
+  
+  function getOverallData():number[] {
+    var overallData:number[] = []
+    const database = getDatabase()
+    var dbRef = ref(database, `treatments/${match.params.temp}/overall benefit`);
+    onValue(dbRef, (snapshot) => {
+      overallData.push(Number(snapshot.val()))
+    });
+    dbRef = ref(database, `treatments/${match.params.temp}/overall adverse`);
+    onValue(dbRef, (snapshot) => {
+      overallData.push(Number(snapshot.val()))
+    });
+    console.log(overallData);
+    return overallData;
+  }
+
   const repeatedArray = [].concat(...Array(20).fill([
     'rgba(255, 99, 132, 0.2)',
     'rgba(54, 162, 235, 0.2)',
@@ -20,7 +37,9 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
     'rgba(255, 159, 64, 0.2)',
     'rgba(255, 99, 132, 0.2)',
   ],));
-  var overallData = [1.8, 0.1];
+  var overallData = getOverallData();
+  console.log(overallData);
+  overallData = [1.8, 0.2]
   var rating = (overallData[0] - overallData[1]) * 2;
   if(rating < 0) {
     rating = 0;
