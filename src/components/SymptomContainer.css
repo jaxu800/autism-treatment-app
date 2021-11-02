@@ -1,10 +1,11 @@
 .symptomcontainer {
     text-align: center;
-    position: absolute;
+    position: static;
     left: 0;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(50%);
+    height: 75%;
   }
   
 .symptomcontainer strong {

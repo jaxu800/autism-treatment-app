@@ -1,5 +1,6 @@
 ion-content{
     --ion-background-color:#e7eff6;
+    --text-color: #FFFFFF;
 }
 
 .new-background-color{
@@ -10,3 +11,13 @@ ion-content{
 .my-label {
     font-size: 3em;
   }
+
+ion-tab-bar{
+    --color:#e7eff6;
+}
+
+ion-tab-button{
+    --color:#555555;
+    --color-focused:#4B86B4;
+    --color-selected:#63ACE5;
+}
