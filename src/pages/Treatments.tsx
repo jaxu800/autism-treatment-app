@@ -18,7 +18,6 @@ const Treatments: React.FC<RouteComponentProps> = ({history}) => {
             <IonTitle size="large">Treatment Options</IonTitle>
           </IonToolbar>
         </IonHeader>
-
         <TreatmentList />
       </IonContent>
     </IonPage>

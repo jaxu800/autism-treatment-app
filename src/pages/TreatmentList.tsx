@@ -1,4 +1,4 @@
-import { IonItem, IonLabel, IonItemGroup, IonRouterOutlet  } from '@ionic/react';
+import { IonItem, IonLabel, IonItemGroup } from '@ionic/react';
 import { getDatabase, ref, onValue } from 'firebase/database'
 
 function getTreatmentList() {
@@ -29,8 +29,8 @@ const TreatmentList: React.FC = () => {
                 </IonLabel>
               </IonItem>
             )
-        })
-      }
+          })
+        }
       </IonItemGroup>
     );
   };

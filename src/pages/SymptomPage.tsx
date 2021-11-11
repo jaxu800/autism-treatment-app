@@ -9,13 +9,10 @@ import { IonContent,
         IonBackButton, 
         IonItemGroup } from '@ionic/react';
 import { RouteComponentProps } from 'react-router';
-<<<<<<< HEAD
 import  { HorizontalBar, Bar } from 'react-chartjs-2';
 import './SymptomContainer.css';
-=======
-import './Tab3.css';
 
->>>>>>> 62651568fabb4d1f502ec1978784578a4ee8b175
+import './Tab3.css';
 
 interface symptomsDetailsProps extends RouteComponentProps<{
   temp: string;
@@ -84,15 +81,10 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({match, history}) => {
           <IonButtons slot="start">
 	          <IonBackButton defaultHref="/symptoms" style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
           </IonButtons>
-<<<<<<< HEAD
-=======
-
->>>>>>> 62651568fabb4d1f502ec1978784578a4ee8b175
 	        <IonTitle style={{padding: '8px', color: 'var(--light-blue-1)', textAlign: "left", fontSize: 22, height: '65px'}}>Symptom Details</IonTitle>
         </IonToolbar>
       </IonHeader>
 
-<<<<<<< HEAD
       <IonContent fullscreen className="new-background-color-2">
         <>
         <div className="starDiv" style={{padding: '5px'}}>
@@ -102,7 +94,7 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({match, history}) => {
           </div>
         </div>
 
-          <IonTitle style={{padding: '10px', fontSize: '16'}}>
+          <IonTitle style={{padding: '10px', fontSize: 18, fontWeight: 'bold'}}>
             Recomended Treatments
           </IonTitle>
 
@@ -110,7 +102,7 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({match, history}) => {
           {
           treatments.map(elem => {
             return(
-              <IonItem className="new-background-color-3" button href={"treatments/" + elem} onClick={() => {}} detail>
+              <IonItem className="new-background-color-2" button href={"treatments/" + elem} onClick={() => {}} detail>
                 <IonLabel>
                   {elem}
                 </IonLabel>
@@ -120,15 +112,6 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({match, history}) => {
           }
           </IonItemGroup>
         </>
-=======
-      <IonContent fullscreen className="new-background-color-1">
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Symptom: {match.params.temp}</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <SymptomContainer />
->>>>>>> 62651568fabb4d1f502ec1978784578a4ee8b175
       </IonContent>
     </IonPage>
   );

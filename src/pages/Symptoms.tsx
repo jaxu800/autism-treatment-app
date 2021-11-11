@@ -13,20 +13,6 @@ const Symptoms: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar className="new-background-color">
-<<<<<<< HEAD
-	        <IonTitle style={{padding: '2px', color: 'var(--light-blue-1)', textAlign: "center", fontSize: 24, height: '65px'}}>Symptoms</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-
-      <IonMenu side="start" menuId="first">
-        <IonHeader>
-          <IonToolbar className="new-background-color">
-            <IonTitle>Filter Options</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonContent>
-          <IonList>
-=======
           <IonButtons  slot="start">
 	          <IonBackButton defaultHref="/home" style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
           </IonButtons>
@@ -36,7 +22,6 @@ const Symptoms: React.FC = () => {
             isOpen={popoverState.showPopover}
             onDidDismiss={() => setShowPopover({ showPopover: false, event: undefined })}
           >
->>>>>>> 62651568fabb4d1f502ec1978784578a4ee8b175
             <IonItem>
               <IonLabel style={{fontWeight: 'bold'}}>Treatment Types</IonLabel>
               <IonSelect value={treatType} onIonChange={e => setTreatType(e.detail.value)}>
