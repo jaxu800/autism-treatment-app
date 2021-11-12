@@ -8,6 +8,7 @@ const SymptomContainer: React.FC = () => {
       <strong>Symptom Page</strong>
       <p>Graph Goes Here</p>
     </div>
+
   );
 };
 

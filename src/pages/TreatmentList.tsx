@@ -2,26 +2,6 @@ import { IonItem, IonLabel, IonItemGroup  } from '@ionic/react';
 import { getDatabase, ref, get, child } from 'firebase/database'
 import React, { useState, useEffect } from 'react';
 
-// var treatments:string[] = [];
-
-// async function getTreatmentList() {
-//   var treatmentList:string[] = [];
-//   const dbRef = ref(getDatabase());
-//   await get(child(dbRef, `treatments`)).then((snapshot) => {
-//     if (snapshot.exists()) {
-//       snapshot.forEach((childSnapshot) => {
-//       var key = childSnapshot.key;
-//       treatmentList.push(String(childSnapshot.key));
-//       });
-//     } else {
-//       console.log("No data available");
-//     }
-//   }).catch((error) => {
-//     console.error(error);
-//   });
-//   return treatmentList;
-// }
-
 const TreatmentList: React.FC = () => {
     
     const initArray: string[] = []
@@ -61,8 +41,8 @@ const TreatmentList: React.FC = () => {
                 </IonLabel>
               </IonItem>
             )
-        })
-      }
+          })
+        }
       </IonItemGroup>
     );
   };

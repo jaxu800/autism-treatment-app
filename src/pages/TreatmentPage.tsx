@@ -219,7 +219,7 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
 
   return (
     <IonPage>
-	  <IonHeader>
+	    <IonHeader>
         <IonToolbar className="new-background-color">
           <IonButtons  slot="start">
 			      <IonBackButton defaultHref="/treatments" style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
