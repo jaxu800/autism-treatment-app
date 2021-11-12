@@ -2,13 +2,14 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA6IZL_5BuVd6OuYSy7SMBY9O-GkkG1HAk",
-  authDomain: "autism-treatment-app-test.firebaseapp.com",
-  databaseURL: "https://autism-treatment-app-test-default-rtdb.firebaseio.com",
-  projectId: "autism-treatment-app-test",
-  storageBucket: "autism-treatment-app-test.appspot.com",
-  messagingSenderId: "207864894310",
-  appId: "1:207864894310:web:9888f2029aaf4cc3346ea7"
+  apiKey: "AIzaSyDXRg0P6XZqSpwnpw2mirNPvwH9TRswlOI",
+  authDomain: "autism-treatment-app-c99c2.firebaseapp.com",
+  databaseURL: "https://autism-treatment-app-c99c2-default-rtdb.firebaseio.com",
+  projectId: "autism-treatment-app-c99c2",
+  storageBucket: "autism-treatment-app-c99c2.appspot.com",
+  messagingSenderId: "98415161975",
+  appId: "1:98415161975:web:ef96a75c1b1ab5e2584c72",
+  measurementId: "G-2GZXEL36HH"
 };
 
 // Initialize Firebase

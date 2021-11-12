@@ -1,23 +1,55 @@
-import { IonItem, IonLabel, IonItemGroup, IonRouterOutlet  } from '@ionic/react';
-import { getDatabase, ref, onValue } from 'firebase/database'
+import { IonItem, IonLabel, IonItemGroup  } from '@ionic/react';
+import { getDatabase, ref, get, child } from 'firebase/database'
+import React, { useState, useEffect } from 'react';
 
-function getTreatmentList() {
-  var treatmentList:string[] = []
-  const database = getDatabase()
-  const dbRef = ref(database, 'treatments');
-  onValue(dbRef, (snapshot) => {
-    snapshot.forEach((childSnapshot) => {
-      var key = childSnapshot.key;
-      treatmentList.push(String(childSnapshot.key));
-    })
-  });
-  return treatmentList;
-}
+// var treatments:string[] = [];
+
+// async function getTreatmentList() {
+//   var treatmentList:string[] = [];
+//   const dbRef = ref(getDatabase());
+//   await get(child(dbRef, `treatments`)).then((snapshot) => {
+//     if (snapshot.exists()) {
+//       snapshot.forEach((childSnapshot) => {
+//       var key = childSnapshot.key;
+//       treatmentList.push(String(childSnapshot.key));
+//       });
+//     } else {
+//       console.log("No data available");
+//     }
+//   }).catch((error) => {
+//     console.error(error);
+//   });
+//   return treatmentList;
+// }
 
 const TreatmentList: React.FC = () => {
     
+    const initArray: string[] = []
+    const [treatments, setTreatments] = useState(initArray);
+    const loadData = () => {
+      const dbRef = ref(getDatabase());
+      get(child(dbRef, `treatments`)).then((snapshot) => {
+        var treatmentList:string[]  = [];
+        if (snapshot.exists()) {
+          snapshot.forEach((childSnapshot) => {
+          var key = childSnapshot.key;
+          treatmentList.push(String(childSnapshot.key));
+          });
+        } else {
+          console.log("No data available");
+        }
+        setTreatments(treatmentList);
+      }).catch((error) => {
+        console.error(error);
+      });
+    }
+
+    useEffect(() => {
+      loadData()
+    }, []);
+
     //var treatments = ["5-HTP", "Biotin", "Blend of Amino Acids", "Calcium", "Carntine", "Chromium", "CoQ10", "Cod Liver Oil", "DMG", "Glutamine", "Iron", "Iodine", "Melatonin", "Omega 3", "Potassium", "Taurine", "Vitamin D", "Zinc"];
-    var treatments = getTreatmentList();
+    //getTreatmentList().then(value => { treatments = value });
     return ( 
       <IonItemGroup>
         {
