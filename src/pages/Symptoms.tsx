@@ -1,4 +1,4 @@
-import { IonListHeader, IonRadioGroup, IonRadio, IonPopover, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonBackButton, IonButton, IonIcon, IonMenu, IonSelect, IonSelectOption, IonList, IonLabel, IonItem } from '@ionic/react';
+import { IonPopover, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonBackButton, IonButton, IonIcon, IonMenu, IonSelect, IonSelectOption, IonList, IonLabel, IonItem } from '@ionic/react';
 import React, { useState } from 'react';
 import SymptomList from '../components/SymptomList';
 import './Tab3.css';
@@ -6,7 +6,7 @@ import {ellipsisVertical} from 'ionicons/icons';
 
 const Symptoms: React.FC = () => {
   const [popoverState, setShowPopover] = useState({ showPopover: false, event: undefined });
-  const [treatType, setTreatType] = useState<string>('all');
+  const [treatType, setTreatType] = useState<string>('diet');
   const [sort, setSort] = useState<string>('overall');
 
   return (
@@ -24,9 +24,8 @@ const Symptoms: React.FC = () => {
           >
             <IonItem>
               <IonLabel style={{fontWeight: 'bold'}}>Treatment Types</IonLabel>
-              <IonSelect value={treatType} onIonChange={e => setTreatType(e.detail.value)}>
-                <IonSelectOption value="all">All</IonSelectOption>
-                <IonSelectOption value="psych">Psych and Seizeure</IonSelectOption>
+              <IonSelect multiple value={treatType} onIonChange={e => setTreatType(e.detail.value)}>
+                <IonSelectOption value="psych">Psych and Seizure</IonSelectOption>
                 <IonSelectOption value="nutraceutical">Nutraceuticals</IonSelectOption>
                 <IonSelectOption value="diet">Diets</IonSelectOption>
                 <IonSelectOption value="therapies">Therapies</IonSelectOption>
@@ -35,7 +34,7 @@ const Symptoms: React.FC = () => {
             <IonItem>
               <IonLabel style={{fontWeight: 'bold'}}>Sort By:</IonLabel>
               <IonSelect value={sort} onIonChange={e => setSort(e.detail.value)}>
-                <IonSelectOption value="overall">Best Overall</IonSelectOption>
+                <IonSelectOption value="overall">Overall Benefit</IonSelectOption>
                 <IonSelectOption value="net">Net Benefit</IonSelectOption>
               </IonSelect>
             </IonItem>
