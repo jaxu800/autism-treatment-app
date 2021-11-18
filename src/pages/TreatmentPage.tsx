@@ -19,6 +19,8 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
   const [symptomsData, setSymptomsData] = useState({});
   const [adverseData, setAdverseData] = useState({});
   const [rating, setRating] = useState(0);
+  const [numSurveyed, setNumSurveyed] = useState(0);
+  const [treatmentType, setTreatmentType] = useState("");
   const [analysis, setAnalysis] = useState("");
   const loadData = () => {
     var overallDataTemp:number[] = [];
@@ -31,6 +33,8 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
         })
         overallDataTemp.push(Number(temp[2]));
         overallDataTemp.push(Number(temp[1]));
+        setNumSurveyed(Number(temp[4]))
+        setTreatmentType(String(temp[0]))
         setOverallData(overallDataTemp);
         setGeneralData({
           labels: ['Overall Benefit', 'Overall Adverse', ],  
@@ -232,9 +236,11 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
         <>
           <div className="starDiv" style={{padding: '5px'}}>
 			      <h1 style={{color: 'black', fontWeight: 'bold', fontFamily: 'sans-serif'}}>{match.params.temp}</h1>
+            <p style={{fontFamily: 'sans-serif'}}>{treatmentType}</p>
 			      <p style={{fontFamily: 'sans-serif'}}>Overall Rating: <strong>{analysis}</strong></p>
             <StarRatings className="starRating" rating={rating} numberOfStars={5} starDimension="20px" starRatedColor="gold"/>
-			      <p style={{fontFamily: 'sans-serif'}}><strong>{rating}</strong> out of 5</p>  
+			      <p style={{fontFamily: 'sans-serif'}}><strong>{rating}</strong> out of 5</p>
+            <p style={{fontFamily: 'sans-serif'}}>Rated by: {numSurveyed} people</p>  
           </div>
 		      <div className="container">
 			      <Bar data={generalData} options={generalOptions}></Bar>

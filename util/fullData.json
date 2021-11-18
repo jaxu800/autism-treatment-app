@@ -1,560 +1,813 @@
 {
+    "symptoms" : {
+        "Aggression or Agitation" : {
+          "Epsom Salt" : 0.54,
+          "Lithium" : 0.22,
+          "Magnesium" : 0.2
+        },
+        "Anxiety" : {
+          "GABA" : 0.27,
+          "High Dose Multivitamin for Children and Adults with ASD" : 0.22,
+          "Lithium" : 0.37,
+          "Magnesium" : 0.33,
+          "PSP" : 0.32,
+          "Tryptophan" : 0.26
+        },
+        "Attention" : {
+          "Cod Liver Oil" : 0.3,
+          "Epsom Salt" : 0.41,
+          "Evening Primrose Oil" : 0.28,
+          "Fish Oil" : 0.21,
+          "High Dose Folinic Acid" : 0.54,
+          "High Dose Multivitamin for Children or Adults with ASD " : 0.32,
+          "Omega 3" : 0.29,
+          "Omega 6" : 0.5,
+          "Oral Vitamin B12" : 0.26,
+          "PSP" : 0.26
+        },
+        "Cognition" : {
+          "CoQ10" : 0.26,
+          "Cod Liver Oil" : 0.43,
+          "Fish Oil " : 0.39,
+          "High Dose Folinic Acid" : 0.63,
+          "High Dose Multivitamin" : 0.23,
+          "High Dose Multivitamin for Children" : 0.35,
+          "Injected Vitamin B12" : 0.42,
+          "Krill Oil" : 0.21,
+          "Lithium" : 0.22,
+          "Moderate Dose Folinic Acid" : 0.2,
+          "Omega 3" : 0.43,
+          "Omega 6" : 0.53,
+          "Oral Vitamin B12" : 0.4
+        },
+        "Constipation" : {
+          "Fruit or Vegetable Powder Concentrate" : 0.53,
+          "Magnesium " : 0.48,
+          "Vitamin C" : 0.22
+        },
+        "Depression" : {
+          "Epsom Salt" : 0.18,
+          "Tryptophan" : 0.13,
+          "Vitamin D" : 0.11
+        },
+        "Diarrhea" : {
+          "Fruit or Vegetable Powder Concentrate" : 0.11,
+          "Glutamine" : 0.08,
+          "High Dose Multivitamin for Children and Adults with ASD" : 0.06
+        },
+        "Eczema or Skin Problems" : {
+          "Biotin" : 0.12,
+          "Vitamin D" : 0.07,
+          "Vitamin E" : 0.08
+        },
+        "Health (fewer or less severe)" : {
+          "Fruit or Vegetable Powder Concentrate " : 0.53,
+          "High Dose Multivitamin" : 0.45,
+          "High Dose Multivitamin for Children and Adults with ASD" : 0.29,
+          "Potassium" : 0.33,
+          "Vitamin C" : 0.51,
+          "Vitamin D" : 0.34,
+          "Vitamin E" : 0.23,
+          "Zinc" : 0.31
+        },
+        "Hyperactivity" : {
+          "High Dose Folinic Acid " : 0.18,
+          "High Dose Multivitamin for Children and Adults with ASD " : 0.13,
+          "Magnesium" : 0.12
+        },
+        "Irritability" : {
+          "High Dose Folinic Acid " : 0.27,
+          "High Dose Multivitamin for Children and Adults with ASD " : 0.22,
+          "Magnesium" : 0.26,
+          "Moderate Dose Folinic Acid" : 0.23
+        },
+        "Language and Communication" : {
+          "Cod Liver Oil" : 0.25,
+          "Epsom Salt" : 0.24,
+          "Fish Oil" : 0.21,
+          "General Glutathione" : 0.32,
+          "High Dose Folinic Acid" : 0.45,
+          "High Dose Multivitamin" : 0.23,
+          "High Dose Multivitamin for Children and Adults with ASD" : 0.22,
+          "Injected Vitamin B12" : 0.45,
+          "Moderate Dose Folinic Acid" : 0.33,
+          "Omega 3" : 0.25,
+          "Omega 6" : 0.32,
+          "Oral Vitamin B12" : 0.3,
+          "TMG" : 0.2
+        },
+        "Lethargy (Easily Tired)" : {
+          "Carnitine" : 0.21,
+          "Chromium" : 0.19,
+          "Injected Vitamin B12" : 0.15
+        },
+        "ODC" : {
+          "High Dose Folinic Acid" : 0.09,
+          "PSP" : 0.13,
+          "Vitamin B3" : 0.1
+        },
+        "Reflux or Vomiting" : {
+          "Epsom Salt" : 0.06,
+          "Milk Thistle" : 0.05,
+          "Vitamin E" : 0.04
+        },
+        "Seizures" : {
+          "High Dose Folinic Acit" : 0.09,
+          "Moderate Dose Folinic Acit" : 0.07,
+          "Oral Vitamin B12" : 0.01
+        },
+        "Self-Injurious behaviors" : {
+          "High Dose Folinic Acid" : 0.09,
+          "High Dose Multivitamin for Children and Adults with ASD" : 0.06,
+          "Oral Glutathion" : 0.07
+        },
+        "Sensory Sensitivity" : {
+          "High Dose Multivitamin for Children and Adults with ASD" : 0.22,
+          "Injected Vitamin B12" : 0.12,
+          "Lithium" : 0.15
+        },
+        "Sleep (staying asleep)" : {
+          "5-HTP" : 0.46,
+          "Melatonin" : 0.63,
+          "Tryptophan " : 0.32,
+          "Valerian Root" : 0.24
+        },
+        "Sleeping (Falling asleep)" : {
+          "5-HTP" : 0.61,
+          "Magnesium" : 0.21,
+          "Melatonin " : 1.33,
+          "Tryptophan" : 0.45,
+          "Valerian Root" : 0.44
+        },
+        "Social Interaction and Understanding" : {
+          "General Glutathione" : 0.26,
+          "High Dose Folinic Acid " : 0.36,
+          "High Dose Multivitamin" : 0.23,
+          "High Dose Multivitamin for Children and Adults with ASD" : 0.26,
+          "Injected Vitamin B12" : 0.26,
+          "Moderate Dose Folinic Acid" : 0.26,
+          "Oral Bitamin B12" : 0.22
+        },
+        "Stimming" : {
+          "Evening Primrose Oil" : 0.14,
+          "High Dose Multivitamin for Children and Adults with ASD" : 0.13,
+          "Tryptophan" : 0.13
+        },
+        "Tics or Involuntary Movements" : {
+          "High Dose Multivitamin" : 0.08,
+          "Potassium" : 0.08,
+          "Tryptophan" : 0.13
+        }
+      },
     "treatments": {
         "Blend of Amino Acids ": {
             "category": "Nutritional Supplement",
             "sub category ": "Amino Acids",
+            "total surveyed": "0",
             "overall benefit": "1.5",
             "overall adverse": "0.1"
         },
         "Glutamine": {
             "category": "Nutritional Supplement",
             "sub category ": "Amino Acids",
+            "total surveyed": "0",
             "overall benefit": "1.1",
             "overall adverse": "0.2"
         },
         "Taurine": {
             "category": "Nutritional Supplement",
             "sub category ": "Amino Acids",
+            "total surveyed": "0",
             "overall benefit": "1.5",
             "overall adverse": "0.4"
         },
         "Tryptophan": {
             "category": "Nutritional Supplement",
             "sub category ": "Amino Acids",
+            "total surveyed": "0",
             "overall benefit": "1.6",
             "overall adverse": "0.2"
         },
         "Cod Liver Oil": {
             "category": "Nutritional Supplement",
             "sub category ": "EFA",
+            "total surveyed": "0",
             "overall benefit": "1.5",
             "overall adverse": "0.1"
         },
         "Evening Primrose Oil": {
             "category": "Nutritional Supplement",
             "sub category ": "EFA",
+            "total surveyed": "0",
             "overall benefit": "1.6",
             "overall adverse": "0.2"
         },
         "Fish Oil": {
             "category": "Nutritional Supplement",
             "sub category ": "EFA",
+            "total surveyed": "0",
             "overall benefit": "1.6",
             "overall adverse": "0"
         },
         "Flax Seed Oil": {
             "category": "Nutritional Supplement",
             "sub category ": "EFA",
+            "total surveyed": "0",
             "overall benefit": "1.2",
             "overall adverse": "0.1"
         },
         "Krill Oil": {
             "category": "Nutritional Supplement",
             "sub category ": "EFA",
+            "total surveyed": "0",
             "overall benefit": "1.5",
             "overall adverse": "0.2"
         },
         "Omega 3": {
             "category": "Nutritional Supplement",
             "sub category ": "EFA",
+            "total surveyed": "0",
             "overall benefit": "1.8",
             "overall adverse": "0"
         },
         "Omega 6": {
             "category": "Nutritional Supplement",
             "sub category ": "EFA",
+            "total surveyed": "0",
             "overall benefit": "2",
             "overall adverse": "0"
         },
         "General Glutathione": {
             "category": "Nutritional Supplement",
             "sub category ": "Glutiathone-Related Treatments",
+            "total surveyed": "0",
             "overall benefit": "1.7",
             "overall adverse": "0.1"
         },
         "Methylcobalamin": {
             "category": "Nutritional Supplement",
             "sub category ": "Glutiathone-Related Treatments",
+            "total surveyed": "0",
             "overall benefit": "2.1",
             "overall adverse": "0.3"
         },
         "Methylcobalamin Injections": {
             "category": "Nutritional Supplement",
             "sub category ": "Glutiathone-Related Treatments",
+            "total surveyed": "0",
             "overall benefit": "1.8",
             "overall adverse": "0.3"
         },
         "Oral Glutathione": {
             "category": "Nutritional Supplement",
             "sub category ": "Glutiathone-Related Treatments",
+            "total surveyed": "0",
             "overall benefit": "1.5",
             "overall adverse": "0"
         },
         "Oral NAC": {
             "category": "Nutritional Supplement",
             "sub category ": "Glutiathone-Related Treatments",
+            "total surveyed": "0",
             "overall benefit": "1.4",
             "overall adverse": "0.3"
         },
         "Transdermal Glutathione": {
             "category": "Nutritional Supplement",
             "sub category ": "Glutiathone-Related Treatments",
+            "total surveyed": "0",
             "overall benefit": "1.1",
             "overall adverse": "0.2"
         },
         "Chromium": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
+            "total surveyed": "0",
             "overall benefit": "1.8",
             "overall adverse": "0"
         },
         "Calcium": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
+            "total surveyed": "0",
             "overall benefit": "1.7",
             "overall adverse": "0.1"
         },
         "Iodine": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
+            "total surveyed": "0",
             "overall benefit": "1.5",
             "overall adverse": "0.2"
         },
         "Iron": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
+            "total surveyed": "0",
             "overall benefit": "1.9",
             "overall adverse": "0.3"
         },
         "Lithium": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
+            "total surveyed": "0",
             "overall benefit": "1.6",
             "overall adverse": "0"
         },
         "Magnesium": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
+            "total surveyed": "0",
             "overall benefit": "1.9",
             "overall adverse": "0.1"
         },
         "Potassium": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
+            "total surveyed": "0",
             "overall benefit": "2.1",
             "overall adverse": "0"
         },
         "Selenium": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
+            "total surveyed": "0",
             "overall benefit": "1.3",
             "overall adverse": "0"
         },
         "Zinc": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
+            "total surveyed": "0",
             "overall benefit": "1.7",
             "overall adverse": "0.1"
         },
         "Biotin": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.4",
             "overall adverse": "0"
         },
         "CoQ10": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.6",
             "overall adverse": "0"
         },
         "DMG": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.2",
             "overall adverse": "0.2"
         },
         "Folic Acid": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.6",
             "overall adverse": "0.1"
         },
         "Folinic Acid, high dose": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "2.2",
             "overall adverse": "0.3"
         },
         "Folinic Acid, moderate dose": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.8",
             "overall adverse": "0.2"
         },
         "Inositol": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.3",
             "overall adverse": "0.2"
         },
         "PSP": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.8",
             "overall adverse": "0.2"
         },
         "TMG": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1",
             "overall adverse": "0.3"
         },
         "Vitamin A (as cod liver oil)": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.6",
             "overall adverse": "0.1"
         },
         "Vitamin A (not as cod liver oil)": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.6",
             "overall adverse": "0.1"
         },
         "Vitamin B1": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.5",
             "overall adverse": "0.1"
         },
         "Vitamin B2": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.5",
             "overall adverse": "0.1"
         },
         "Vitamin B3": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.5",
             "overall adverse": "0.2"
         },
         "Vitamin B5": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.3",
             "overall adverse": "0"
         },
         "Vitamin B6, medium dose": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.3",
             "overall adverse": "0.1"
         },
         "Vitamin B12 (Injected)": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.8",
             "overall adverse": "0.3"
         },
         "Vitamin B12 (Oral)": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.5",
             "overall adverse": "0.1"
         },
         "Vitamin C": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.9",
             "overall adverse": "0.1"
         },
         "Vitamin D": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.9",
             "overall adverse": "0"
         },
         "Vitamin E": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.6",
             "overall adverse": "0"
         },
         "Vitamin K": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
+            "total surveyed": "0",
             "overall benefit": "1.4",
             "overall adverse": "0"
         },
         "High Dose MultiVitamin": {
             "category": "Nutritional Supplement",
             "sub category ": "MultiVitamins",
+            "total surveyed": "0",
             "overall benefit": "1.9",
             "overall adverse": "0.2"
         },
         "High Dose MultiVitamin for Children or Adults with ASD": {
             "category": "Nutritional Supplement",
             "sub category ": "MultiVitamins",
+            "total surveyed": "0",
             "overall benefit": "1.8",
             "overall adverse": "0.2"
         },
         "Generic Child or Adult MultiVitamin": {
             "category": "Nutritional Supplement",
             "sub category ": "MultiVitamins",
+            "total surveyed": "0",
             "overall benefit": "1.4",
             "overall adverse": "0"
         },
         "Melatonin": {
             "category": "Nutritional Supplement",
             "sub category ": "Sleep Treatment ",
+            "total surveyed": "0",
             "overall benefit": "2.1",
             "overall adverse": "0.3"
         },
         "Valerian Root": {
             "category": "Nutritional Supplement",
             "sub category ": "Sleep Treatment ",
+            "total surveyed": "0",
             "overall benefit": "1.2",
             "overall adverse": "0.3"
         },
         "5-HTP": {
             "category": "Nutritional Supplement",
             "sub category ": "Sleep Treatment ",
+            "total surveyed": "0",
             "overall benefit": "1.8",
             "overall adverse": "0.1"
         },
         "GABA": {
             "category": "Nutritional Supplement",
             "sub category ": "Other",
+            "total surveyed": "0",
             "overall benefit": "1.3",
             "overall adverse": "0.2"
         },
         "Fruit or Vegetable Powder Concentrate": {
             "category": "Nutritional Supplement",
             "sub category ": "Other",
+            "total surveyed": "0",
             "overall benefit": "2.2",
             "overall adverse": "0"
         },
         "Milk Thistle": {
             "category": "Nutritional Supplement",
             "sub category ": "Other",
+            "total surveyed": "0",
             "overall benefit": "1.5",
             "overall adverse": "0"
         },
         "Carntine": {
             "category": "Nutritional Supplement",
             "sub category ": "Other",
+            "total surveyed": "0",
             "overall benefit": "1.3",
             "overall adverse": "0.1"
         },
         "Epsom Salt": {
             "category": "Nutritional Supplement",
             "sub category ": "Other",
+            "total surveyed": "0",
             "overall benefit": "1.6",
             "overall adverse": "0"
         },
         "Adderall": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "112",
             "overall benefit": "2.2",
             "overall adverse": "2.5"
         },
         "Aripiprazole": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "81",
             "overall benefit": "2.6",
             "overall adverse": "2"
         },
         "Atomoxetine": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "61",
             "overall benefit": "2.3",
             "overall adverse": "1.9"
         },
         "Buspirone": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "33",
             "overall benefit": "2.5",
             "overall adverse": "1.6"
         },
         "Carbamazepine": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "26",
             "overall benefit": "2.3",
             "overall adverse": "2"
         },
         "Citalopram": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "32",
             "overall benefit": "2.2",
             "overall adverse": "2"
         },
         "Clonazepam": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "54",
             "overall benefit": "2.2",
             "overall adverse": "2.1"
         },
         "Clonidine": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "81",
             "overall benefit": "2.7",
             "overall adverse": "1.8"
         },
         "Dexmethylphenidate": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "44",
             "overall benefit": "2.5",
             "overall adverse": "2"
         },
         "Diazepam": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "27",
             "overall benefit": "2.5",
             "overall adverse": "2"
         },
         "Divalproex Sodium": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "49",
             "overall benefit": "2.2",
             "overall adverse": "2.2"
         },
         "Escitalopram": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "36",
             "overall benefit": "2",
             "overall adverse": "2"
         },
         "Fluoxetine": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "93",
             "overall benefit": "2.5",
             "overall adverse": "1.8"
         },
         "Gabapentin": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "21",
             "overall benefit": "2.6",
             "overall adverse": "1.6"
         },
         "Guanfacine": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "76",
             "overall benefit": "2.5",
             "overall adverse": "1.8"
         },
         "Lamotrigine": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "42",
             "overall benefit": "3",
             "overall adverse": "1.8"
         },
         "Levetiracetam": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "24",
             "overall benefit": "2.7",
             "overall adverse": "2.1"
         },
         "Methylphenidate": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "114",
             "overall benefit": "2.5",
             "overall adverse": "2.4"
         },
         "Olanzapine": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "21",
             "overall benefit": "1.9",
             "overall adverse": "2.5"
         },
         "Oxcarbazepine": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "22",
             "overall benefit": "2.9",
             "overall adverse": "1.8"
         },
         "Quetiapine": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "40",
             "overall benefit": "2.1",
             "overall adverse": "2.5"
         },
         "Risperidone": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "150",
             "overall benefit": "2.8",
             "overall adverse": "2.5"
         },
         "Sertraline": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "87",
             "overall benefit": "2.6",
             "overall adverse": "1.8"
         },
         "Topiramate": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
+            "total surveyed": "23",
             "overall benefit": "2.3",
             "overall adverse": "2.6"
         },
         "Casein-Free": {
             "category": "Diet",
             "sub category ": "Diet",
+            "total surveyed": "112",
             "overall benefit": "3.2",
             "overall adverse": "1.1"
         },
         "Corn-free": {
             "category": "Diet",
             "sub category ": "Diet",
+            "total surveyed": "42",
             "overall benefit": "3.4",
             "overall adverse": "1"
         },
         "Feingold Diet": {
             "category": "Diet",
             "sub category ": "Diet",
+            "total surveyed": "69",
             "overall benefit": "3.6",
             "overall adverse": "1"
         },
         "Food-Avoidance": {
             "category": "Diet",
             "sub category ": "Diet",
+            "total surveyed": "71",
             "overall benefit": "3.6",
             "overall adverse": "1.2"
         },
         "GFCF": {
             "category": "Diet",
             "sub category ": "Diet",
+            "total surveyed": "200",
             "overall benefit": "3.5",
             "overall adverse": "1.1"
         },
         "Gluten-Free": {
             "category": "Diet",
             "sub category ": "Diet",
+            "total surveyed": "100",
             "overall benefit": "3.1",
             "overall adverse": "1"
         },
         "Healthy diet": {
             "category": "Diet",
             "sub category ": "Diet",
+            "total surveyed": "161",
             "overall benefit": "3.8",
             "overall adverse": "1"
         },
         "Low-Sugar": {
             "category": "Diet",
             "sub category ": "Diet",
+            "total surveyed": "83",
             "overall benefit": "3.6",
             "overall adverse": "1.1"
         },
         "Soy-free": {
             "category": "Diet",
             "sub category ": "Diet",
+            "total surveyed": "58",
             "overall benefit": "3.3",
             "overall adverse": "1"
         },
         "Specific Carbohydrate Diet": {
             "category": "Diet",
             "sub category ": "Diet",
+            "total surveyed": "30",
             "overall benefit": "3.4",
             "overall adverse": "1.2"
         }

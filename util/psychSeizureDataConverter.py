@@ -18,9 +18,11 @@ finalDataF = pd.DataFrame(medList, columns=['treatment'])
 finalDataF['category'] = medCategory
 finalDataF['sub category'] = medSubCategory
 overallBenefit = []
+numSurveyed = []
 for column in definingDF:
+    numSurveyed.append(definingDF[column].count())
     overallBenefit.append(pd.to_numeric(definingDF[column], errors='coerce').mean(skipna=True))
-   
+finalDataF['total surveyed'] = numSurveyed
 
 overallBenefit = [round(num, 1) for num in overallBenefit]
 finalDataF['overall benefit'] = overallBenefit
