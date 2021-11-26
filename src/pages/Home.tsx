@@ -27,7 +27,8 @@ const Home: React.FC = () => {
 
         <IonList style={{backgroundColor: 'var(--light-blue-1)'}}>
           <IonCard href="/treatments" style={{backgroundColor: 'white'}}>
-            <img src="https://cdn.pixabay.com/photo/2020/11/03/15/31/doctor-5710152_1280.jpg"></img>
+            {/*<img src="https://cdn.pixabay.com/photo/2020/11/03/15/31/doctor-5710152_1280.jpg"></img>*/}
+            <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1191&q=80"></img>
             <IonCardHeader>
               <IonCardTitle style={{textAlign: 'center', fontSize: 17, color: 'black', fontWeight: 'bold'}}>Treatment Types</IonCardTitle>
             </IonCardHeader>
@@ -37,7 +38,7 @@ const Home: React.FC = () => {
           </IonCard>
 
           <IonCard href="/symptoms" style={{backgroundColor: 'white'}}>
-            <img src="https://cdn.pixabay.com/photo/2017/06/27/11/48/team-spirit-2447163_1280.jpg"></img>
+            <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8cGlsbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"></img>
             <IonCardHeader>
               <IonCardTitle style={{textAlign: 'center', fontSize: 17, color: 'black', fontWeight: 'bold'}}>Symptom Search</IonCardTitle>
             </IonCardHeader>
@@ -52,7 +53,7 @@ const Home: React.FC = () => {
               <IonCardTitle style={{textAlign: 'center', fontSize: 17, color: 'black', fontWeight: 'bold'}}> ANRC Guidelines </IonCardTitle>
             </IonCardHeader>
             <IonCardContent style={{color: 'var(--dark-gray)'}}>
-              Read about the nutritional guidelines from the Autism Nutritional Research Center
+              Read about the nutritional guidelines from the Autism Nutrition Research Center
             </IonCardContent>
           </IonCard>
 

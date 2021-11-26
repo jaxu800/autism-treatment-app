@@ -1,4 +1,4 @@
-import { IonPopover, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonBackButton, IonButton, IonIcon, IonMenu, IonSelect, IonSelectOption, IonList, IonLabel, IonItem } from '@ionic/react';
+import { IonPopover, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonBackButton, IonButton, IonIcon, IonSelect, IonSelectOption, IonList, IonLabel, IonItem } from '@ionic/react';
 import React, { useState } from 'react';
 import SymptomList from '../components/SymptomList';
 import './Tab3.css';
@@ -28,7 +28,6 @@ const Symptoms: React.FC = () => {
                 <IonSelectOption value="psych">Psych and Seizure</IonSelectOption>
                 <IonSelectOption value="nutraceutical">Nutraceuticals</IonSelectOption>
                 <IonSelectOption value="diet">Diets</IonSelectOption>
-                <IonSelectOption value="therapies">Therapies</IonSelectOption>
               </IonSelect>
             </IonItem>
             <IonItem>

@@ -4,12 +4,18 @@ import { IonContent,
         IonTitle, 
         IonToolbar, 
         IonItem, 
-        IonLabel, 
+        IonLabel,
+        IonPopover,
+        IonText,
+        IonButton,
+        IonIcon,
         IonButtons, 
         IonBackButton, 
         IonItemGroup } from '@ionic/react';
+import React, { useState } from 'react';
 import { RouteComponentProps } from 'react-router';
 import  { HorizontalBar, Bar } from 'react-chartjs-2';
+import {ellipsisVertical} from 'ionicons/icons';
 import './SymptomContainer.css';
 
 import './Tab3.css';
@@ -33,7 +39,7 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({match, history}) => {
     labels: ['Melatonin', '5-HTP', 'Tryptophan', 'Valerian Root','Melatonin', '5-HTP', 'Tryptophan', 'Valerian Root',],
     datasets: [
       {
-        label: 'Overall Net Benefit Rating',
+        label: 'Overall/Net Benefit Rating',
         backgroundColor: repeatedArray,
         borderColor: repeatedArray,
         borderWidth: 2,
@@ -68,11 +74,16 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({match, history}) => {
       yAxes: [{
         scaleLabel: {
           display: true,
-          labelString: 'Overall Net Benefit Rating'
+          labelString: 'Overall/Net Benefit Rating'
         }
       }]
     }
   };
+
+  
+  const [popoverState, setShowPopover] = useState({ showPopover: false, event: undefined });
+  const [treatType, setTreatType] = useState<string>('diet');
+  const [sort, setSort] = useState<string>('overall');
   
   return (
     <IonPage>
@@ -81,7 +92,30 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({match, history}) => {
           <IonButtons slot="start">
 	          <IonBackButton defaultHref="/symptoms" style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
           </IonButtons>
-	        <IonTitle style={{padding: '8px', color: 'var(--light-blue-1)', textAlign: "left", fontSize: 22, height: '65px'}}>Symptom Details</IonTitle>
+	        <IonTitle style={{padding: '0px', color: 'var(--light-blue-1)', textAlign: "center", fontSize: 21, height: '65px'}}>Symptom Details</IonTitle>
+          <IonPopover
+            event={popoverState.event}
+            isOpen={popoverState.showPopover}
+            onDidDismiss={() => setShowPopover({ showPopover: false, event: undefined })}
+          >
+            <IonItem>
+              <IonContent>
+                <IonTitle style={{textAlign: 'center', height: '50px', fontSize: 30}}>About</IonTitle>
+                <p style={{fontFamily: 'var(--font-family-base)'}}>
+                  The "about" information for this page will belong here.
+                  This text will appear as the same for each symptom.
+                </p>
+              </IonContent>
+            </IonItem>
+          </IonPopover>
+          <IonButton slot="end" color="light-blue-1" fill="clear" onClick={
+            (e: any) => {
+              e.persist();
+              setShowPopover({ showPopover: true, event: e})
+            }
+          }>
+            <IonIcon slot="icon-only" icon={ellipsisVertical} style={{color: '#e7eff6'}} />
+          </IonButton>
         </IonToolbar>
       </IonHeader>
 
