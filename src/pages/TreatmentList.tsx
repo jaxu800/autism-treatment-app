@@ -1,23 +1,23 @@
-import { IonItem, IonLabel, IonItemGroup, IonRouterOutlet  } from '@ionic/react';
-import { getDatabase, ref, onValue } from 'firebase/database'
-
-function getTreatmentList() {
-  var treatmentList:string[] = []
-  const database = getDatabase()
-  const dbRef = ref(database, 'treatments');
-  onValue(dbRef, (snapshot) => {
-    snapshot.forEach((childSnapshot) => {
-      var key = childSnapshot.key;
-      treatmentList.push(String(childSnapshot.key));
-    })
-  });
-  return treatmentList;
-}
+import { IonItem, IonLabel, IonItemGroup  } from '@ionic/react';
+import React, { useState, useEffect} from 'react';
 
 const TreatmentList: React.FC = () => {
-    
-    //var treatments = ["5-HTP", "Biotin", "Blend of Amino Acids", "Calcium", "Carntine", "Chromium", "CoQ10", "Cod Liver Oil", "DMG", "Glutamine", "Iron", "Iodine", "Melatonin", "Omega 3", "Potassium", "Taurine", "Vitamin D", "Zinc"];
-    var treatments = getTreatmentList();
+  const[data,setData] = useState([{}])
+
+  useEffect(() => {
+      fetch('/treatementsList').then((response) => {
+          if (response.ok){
+            return response.json()
+          }
+        }).then(
+          (data) => {
+            setData(data)
+            console.log(data)
+          }
+        )
+  },[])
+
+    var treatments = Object.keys(data);
     return ( 
       <IonItemGroup>
         {

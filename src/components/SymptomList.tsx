@@ -1,7 +1,23 @@
 import { IonItem, IonLabel, IonItemGroup } from '@ionic/react';
+import React, { useState, useEffect } from 'react';
 
 const SymptomList: React.FC = () => {
-    var symptomss = ["Aggression", "Anxiety", "Attention", "Cognition", "Communication", "Irritability" ];
+
+    const[data,setData] = useState([{}])
+
+    useEffect(() => {
+        fetch('/symptomsList').then((response) => {
+            if (response.ok){
+              return response.json()
+            }
+          }).then(
+            (data) => {
+              setData(data)
+            }
+          )
+    },[])
+
+    var symptomss = Object.keys(data);
     return (
         <IonItemGroup>
         {
