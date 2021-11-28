@@ -17,7 +17,7 @@
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
     "chart.js": "^2.9.4",
-    "firebase": "^9.1.0",
+    "firebase": "^9.4.0",
     "ionicons": "^5.4.0",
     "react": "^17.0.1",
     "react-chartjs-2": "^2.11.1",

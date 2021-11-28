@@ -69,7 +69,6 @@ const Symptoms: React.FC = () => {
                   Nutraceuticals
                 </IonSelectOption>
                 <IonSelectOption value="diet">Diets</IonSelectOption>
-                <IonSelectOption value="therapies">Therapies</IonSelectOption>
               </IonSelect>
             </IonItem>
             <IonItem>

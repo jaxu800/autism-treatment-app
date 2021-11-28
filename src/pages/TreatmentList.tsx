@@ -1,23 +1,35 @@
 import { IonItem, IonLabel, IonItemGroup  } from '@ionic/react';
-import React, { useState, useEffect} from 'react';
+import { getDatabase, ref, get, child } from 'firebase/database'
+import React, { useState, useEffect } from 'react';
 
 const TreatmentList: React.FC = () => {
-  const[data,setData] = useState([{}])
+    
+    const initArray: string[] = []
+    const [treatments, setTreatments] = useState(initArray);
+    const loadData = () => {
+      const dbRef = ref(getDatabase());
+      get(child(dbRef, `treatments`)).then((snapshot) => {
+        var treatmentList:string[]  = [];
+        if (snapshot.exists()) {
+          snapshot.forEach((childSnapshot) => {
+          var key = childSnapshot.key;
+          treatmentList.push(String(childSnapshot.key));
+          });
+        } else {
+          console.log("No data available");
+        }
+        setTreatments(treatmentList);
+      }).catch((error) => {
+        console.error(error);
+      });
+    }
 
-  useEffect(() => {
-      fetch('/treatementsList').then((response) => {
-          if (response.ok){
-            return response.json()
-          }
-        }).then(
-          (data) => {
-            setData(data)
-            console.log(data)
-          }
-        )
-  },[])
+    useEffect(() => {
+      loadData()
+    }, []);
 
-    var treatments = Object.keys(data);
+    //var treatments = ["5-HTP", "Biotin", "Blend of Amino Acids", "Calcium", "Carntine", "Chromium", "CoQ10", "Cod Liver Oil", "DMG", "Glutamine", "Iron", "Iodine", "Melatonin", "Omega 3", "Potassium", "Taurine", "Vitamin D", "Zinc"];
+    //getTreatmentList().then(value => { treatments = value });
     return ( 
       <IonItemGroup>
         {
@@ -29,8 +41,8 @@ const TreatmentList: React.FC = () => {
                 </IonLabel>
               </IonItem>
             )
-        })
-      }
+          })
+        }
       </IonItemGroup>
     );
   };

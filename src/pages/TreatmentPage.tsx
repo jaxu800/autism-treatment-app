@@ -1,11 +1,11 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonBackButton, IonButtons } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonBackButton, IonButtons, useIonViewWillEnter } from '@ionic/react';
 import { RouteComponentProps } from 'react-router';
 import  { HorizontalBar, Bar } from 'react-chartjs-2';
-import { getDatabase, ref, onValue } from 'firebase/database'
+import { getDatabase, ref, onValue, get, child, } from 'firebase/database'
+import React, { useState, useEffect} from 'react';
 // @ts-ignore
 import StarRatings from 'react-star-ratings';
 import './TreatmentPage.css';
-
 
 interface treatmentDetailsProps extends RouteComponentProps<{
   temp: string;
@@ -13,20 +13,124 @@ interface treatmentDetailsProps extends RouteComponentProps<{
 
 const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
   
-  function getOverallData():number[] {
-    var overallData:number[] = []
-    const database = getDatabase()
-    var dbRef = ref(database, `treatments/${match.params.temp}/overall benefit`);
-    onValue(dbRef, (snapshot) => {
-      overallData.push(Number(snapshot.val()))
+  const initArray: number[] = [];
+  const [overallData, setOverallData] = useState(initArray);
+  const [generalData, setGeneralData] = useState({});
+  const [symptomsData, setSymptomsData] = useState({});
+  const [adverseData, setAdverseData] = useState({});
+  const [rating, setRating] = useState(0);
+  const [numSurveyed, setNumSurveyed] = useState(0);
+  const [treatmentType, setTreatmentType] = useState("");
+  const [analysis, setAnalysis] = useState("");
+  const loadData = () => {
+    var overallDataTemp:number[] = [];
+    var dbref = ref(getDatabase())
+    get(child(dbref, `treatments/${match.params.temp}`)).then((snapshot) => {
+      var temp:any[] = [];
+      if (snapshot.exists()) {
+        snapshot.forEach((childSnapshot) => {
+          temp.push(childSnapshot.val())
+        })
+        overallDataTemp.push(Number(temp[2]));
+        overallDataTemp.push(Number(temp[1]));
+        setNumSurveyed(Number(temp[4]))
+        setTreatmentType(String(temp[0]))
+        setOverallData(overallDataTemp);
+        setGeneralData({
+          labels: ['Overall Benefit', 'Overall Adverse', ],  
+          datasets: [
+            {
+              label: 'Rating',
+              backgroundColor: repeatedArray,
+              borderColor: repeatedArray,
+              borderWidth: 2,
+              data: overallDataTemp
+            }
+          ]
+        });
+        var tempRating:number = Number(((overallDataTemp[0] - overallDataTemp[1]) * 2).toFixed(1));
+        //console.log(tempRating + "Ok");
+        if(tempRating < 0) {
+          setRating(0);
+        }
+        else {
+          setRating(tempRating);
+        }
+    
+        if(tempRating >=0 && tempRating <= 1) {
+          setAnalysis("Poor");
+        }
+        else if(tempRating > 1 && tempRating <= 2) {
+          setAnalysis("Fair");
+        }
+        else if(tempRating > 2 && tempRating <=3) {
+          setAnalysis("Good");
+        }
+        else if(tempRating > 3 && tempRating <=4) {
+          setAnalysis("Very Good");
+        }
+        else if(tempRating > 4 && tempRating <=5) {
+          setAnalysis("Excellent");
+        }
+      } else {
+        console.log("No data available");
+      }
+    }).catch((error) => {
+      console.error(error);
     });
-    dbRef = ref(database, `treatments/${match.params.temp}/overall adverse`);
-    onValue(dbRef, (snapshot) => {
-      overallData.push(Number(snapshot.val()))
+
+    get(child(dbref, `treatmentSymptoms/${match.params.temp}`)).then((snapshot) => {
+      var treatmentSymptomList:number[]  = [];
+      if (snapshot.exists()) {
+        snapshot.forEach((childSnapshot) => {
+          var symptomVal = childSnapshot.val();
+          treatmentSymptomList.push(parseInt(symptomVal))
+        });
+      } else {
+        console.log("No data available");
+      }
+      setSymptomsData({
+        labels: ['Aggression', 'Anxiety', 'Attention', 'Cognition', 'Communication','Constipation', 'Depression', 'Diarrhea', 'Falling Asleep', 'General', 'Health', 'Hyperactivity', 'Irritability', 'Lethargy', 'OCD', 'Reflux', 'Seizures', 'Self-Injury', 'Sensory', 'Skin Problem', 'Social', 'Staying Asleep', 'Stimming', 'Tics'],
+        datasets: [
+          {
+            label: '% Who Benefit',
+            backgroundColor: repeatedArray,
+            borderColor: repeatedArray,
+            borderWidth: 2,
+            data: treatmentSymptomList
+          }
+        ]
+      });
+    }).catch((error) => {
+      console.error(error);
     });
-    console.log(overallData);
-    return overallData;
-  }
+
+    get(child(dbref, `treatmentAdverse/${match.params.temp}`)).then((snapshot) => {
+      var treatmentAdverseList:number[]  = [];
+      if (snapshot.exists()) {
+        snapshot.forEach((childSnapshot) => {
+          var symptomVal = childSnapshot.val();
+          treatmentAdverseList.push(parseInt(symptomVal))
+        });
+      } else {
+        console.log("No data available");
+      }
+      setAdverseData({
+        labels: ['Aggression', 'Anxiety', 'Behavior', 'Bladder', 'Cognition', 'Depression', 'Dizziness', 'Dry mouth', 'Fatigue', 'Gastrointestinal', 'General', 'Headache', 'Hyperactivity', 'Irritability', 'Liver & Kidney', 'Loss of appetite', 'Nausea', 'Rash', 'Seizures', 'Self-injury', 'Sleep', 'Stimming', 'Tics', 'Weight gain', 'Weight loss'],  
+        datasets: [
+          {
+            label: '% With Adverse Effects',
+            backgroundColor: repeatedArray,
+            borderColor: repeatedArray,
+            borderWidth: 2,
+            data: treatmentAdverseList
+          }
+        ]
+      });
+    }).catch((error) => {
+      console.error(error);
+    });
+  };
 
   const repeatedArray = [].concat(...Array(20).fill([
     'rgba(255, 99, 132, 0.2)',
@@ -37,41 +141,7 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
     'rgba(255, 159, 64, 0.2)',
     'rgba(255, 99, 132, 0.2)',
   ],));
-  var overallData = getOverallData();
-  console.log(overallData);
-  overallData = [1.8, 0.2]
-  var rating = (overallData[0] - overallData[1]) * 2;
-  if(rating < 0) {
-    rating = 0;
-  }
-  var analysis = "";
-  if(rating >=0 && rating <= 1) {
-    analysis = "Poor";
-  }
-  else if(rating > 1 && rating <= 2) {
-    analysis = "Fair";
-  }
-  else if(rating > 2 && rating <=3) {
-    analysis = "Good";
-  }
-  else if(rating > 3 && rating <=4) {
-    analysis = "Very Good";
-  }
-  else if(rating > 4 && rating <=5) {
-    analysis = "Excellent"
-  }
-  const symptomsData = {
-    labels: ['Aggression', 'Anxiety', 'Attention', 'Cognition', 'Communication','Constipation', 'Depression', 'Diarrhea', 'Falling Asleep', 'General', 'Health', 'Hyperactivity', 'Irritability', 'Lethargy', 'OCD', 'Reflux', 'Seizures', 'Self-Injury', 'Sensory', 'Skin Problem', 'Social', 'Staying Asleep', 'Stimming', 'Tics'],
-    datasets: [
-      {
-        label: '% Who Benefit',
-        backgroundColor: repeatedArray,
-        borderColor: repeatedArray,
-        borderWidth: 2,
-        data: [9, 11, 2, 2, 2, 0, 4, 0, 36, 27, 2, 0, 7, 2, 2, 0, 0, 0, 0, 0, 2, 27, 2, 2, 0]
-      }
-    ]
-  };
+
   const symptomsOptions = {
     title: {
       display: true,
@@ -98,18 +168,7 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
       }]
     }
   };
-  const adverseData = {
-    labels: ['Aggression', 'Anxiety', 'Behavior', 'Bladder', 'Cognition', 'Depression', 'Dizziness', 'Dry mouth', 'Fatigue', 'Gastrointestinal', 'General', 'Headache', 'Hyperactivity', 'Irritability', 'Liver & Kidney', 'Loss of appetite', 'Nausea', 'Rash', 'Seizures', 'Self-injury', 'Sleep', 'Stimming', 'Tics', 'Weight gain', 'Weight loss'],  
-    datasets: [
-      {
-        label: '% With Adverse Effects',
-        backgroundColor: repeatedArray,
-        borderColor: repeatedArray,
-        borderWidth: 2,
-        data: [4, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0]
-      }
-    ]
-  };
+
   const adverseOptions = {
     title: {
       display: true,
@@ -136,18 +195,7 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
       }]
     }
   };
-  const generalData = {
-    labels: ['Overall Benefit', 'Overall Adverse', ],  
-    datasets: [
-      {
-        label: 'Rating',
-        backgroundColor: repeatedArray,
-        borderColor: repeatedArray,
-        borderWidth: 2,
-        data: overallData
-      }
-    ]
-  };
+
   const generalOptions = {
     title: {
       display: true,
@@ -168,6 +216,11 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
     }
 
   };
+
+  useEffect(() => {
+    loadData()
+  }, []);
+
   return (
     <IonPage>
 	    <IonHeader>
@@ -182,11 +235,12 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
       <IonContent fullscreen className="new-background-color-2">
         <>
           <div className="starDiv" style={{padding: '5px'}}>
-			      <h1 style={{color: 'black', fontWeight: 'bold', fontFamily: 'sans-serif'}}>{match.params.temp}</h1>
+			      <h1 style={{color: 'black', fontWeight: 'bold', fontSize: 24, fontFamily: 'sans-serif'}}>{match.params.temp}</h1>
+            <p style={{fontFamily: 'sans-serif'}}>{treatmentType}</p>
 			      <p style={{fontFamily: 'sans-serif'}}>Overall Rating: <strong>{analysis}</strong></p>
-			      <StarRatings className="starRating" rating={rating} numberOfStars={5} starDimension="20px" starRatedColor="gold"/>
-			      <p style={{fontFamily: 'sans-serif'}}><strong>{rating}</strong> out of 5</p>  
-			      <p style={{fontFamily: 'sans-serif'}}>Rated by: 150 people</p>
+            <StarRatings className="starRating" rating={rating} numberOfStars={5} starDimension="20px" starRatedColor="gold"/>
+			      <p style={{fontFamily: 'sans-serif'}}><strong>{rating}</strong> out of 5</p>
+            <p style={{fontFamily: 'sans-serif'}}>Rated by: {numSurveyed} people</p>  
           </div>
 		      <div className="container">
 			      <Bar data={generalData} options={generalOptions}></Bar>
