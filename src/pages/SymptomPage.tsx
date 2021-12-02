@@ -102,8 +102,11 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({match, history}) => {
               <IonContent>
                 <IonTitle style={{textAlign: 'center', height: '50px', fontSize: 30}}>About</IonTitle>
                 <p style={{fontFamily: 'var(--font-family-base)'}}>
-                  The "about" information for this page will belong here.
-                  This text will appear as the same for each symptom.
+                  This page displays treatment ratings for this symptom, 
+                  with the most effective treatments having the highest scores. You have the option to 
+                  sort these treatments by Overall Benefit (ignoring adverse effects) 
+                  or by Net Benefit (factoring in adverse effects). 
+                  To learn more about each treatment, click on the name of the treatment in the list below.
                 </p>
               </IonContent>
             </IonItem>

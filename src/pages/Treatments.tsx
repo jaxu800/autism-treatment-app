@@ -1,11 +1,12 @@
 import { IonSegment, IonSegmentButton, IonButton, IonIcon, IonPopover, IonSelect, IonSelectOption, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonItem, IonLabel, IonButtons, IonBackButton } from '@ionic/react';
 import { RouteComponentProps } from 'react-router';
 import TreatmentList from './TreatmentList';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {ellipsisVertical} from 'ionicons/icons';
 import './Tab2.css';
 
 const Treatments: React.FC<RouteComponentProps> = ({history}) => {
+  const [selectedTreatType, setSelectedTreatType] = useState<string>('')
 
   return (
     <IonPage>
@@ -21,7 +22,7 @@ const Treatments: React.FC<RouteComponentProps> = ({history}) => {
             <IonTitle size="large">Treatment Options</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <IonSegment onIonChange={e => console.log('Segment selected', e.detail.value)} value="psych">
+        <IonSegment onIonChange={e => setSelectedTreatType(e.detail.value!)}>
           <IonSegmentButton value="psych">
             <IonLabel style={{fontSize: 11, color: 'black'}}>Meds</IonLabel>
           </IonSegmentButton>
@@ -32,7 +33,7 @@ const Treatments: React.FC<RouteComponentProps> = ({history}) => {
             <IonLabel style={{fontSize: 11, color: 'black'}}>Diets</IonLabel>
           </IonSegmentButton>
         </IonSegment>
-        <TreatmentList />
+        <TreatmentList selectedValue={selectedTreatType}/>
       </IonContent>
     </IonPage>
   );
