@@ -6,9 +6,6 @@ import {ellipsisVertical} from 'ionicons/icons';
 import './Tab2.css';
 
 const Treatments: React.FC<RouteComponentProps> = ({history}) => {
-  const [popoverState, setShowPopover] = useState({ showPopover: false, event: undefined });
-  const [treatType, setTreatType] = useState<string>('diet');
-  const [sort, setSort] = useState<string>('overall');
 
   return (
     <IonPage>
