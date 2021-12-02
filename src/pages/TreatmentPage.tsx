@@ -53,6 +53,9 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
         if(tempRating < 0) {
           setRating(0);
         }
+        else if (tempRating > 5) {
+          setRating(5);
+        }
         else {
           setRating(tempRating);
         }

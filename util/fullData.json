@@ -163,84 +163,84 @@
         "Blend of Amino Acids ": {
             "category": "Nutritional Supplement",
             "sub category ": "Amino Acids",
-            "total surveyed": "0",
+            "total surveyed": "52",
             "overall benefit": "1.5",
             "overall adverse": "0.1"
         },
         "Glutamine": {
             "category": "Nutritional Supplement",
             "sub category ": "Amino Acids",
-            "total surveyed": "0",
+            "total surveyed": "21",
             "overall benefit": "1.1",
             "overall adverse": "0.2"
         },
         "Taurine": {
             "category": "Nutritional Supplement",
             "sub category ": "Amino Acids",
-            "total surveyed": "0",
+            "total surveyed": "28",
             "overall benefit": "1.5",
             "overall adverse": "0.4"
         },
         "Tryptophan": {
             "category": "Nutritional Supplement",
             "sub category ": "Amino Acids",
-            "total surveyed": "0",
+            "total surveyed": "22",
             "overall benefit": "1.6",
             "overall adverse": "0.2"
         },
         "Cod Liver Oil": {
             "category": "Nutritional Supplement",
             "sub category ": "EFA",
-            "total surveyed": "0",
+            "total surveyed": "59",
             "overall benefit": "1.5",
             "overall adverse": "0.1"
         },
         "Evening Primrose Oil": {
             "category": "Nutritional Supplement",
             "sub category ": "EFA",
-            "total surveyed": "0",
+            "total surveyed": "20",
             "overall benefit": "1.6",
             "overall adverse": "0.2"
         },
         "Fish Oil": {
             "category": "Nutritional Supplement",
             "sub category ": "EFA",
-            "total surveyed": "0",
+            "total surveyed": "161",
             "overall benefit": "1.6",
             "overall adverse": "0"
         },
         "Flax Seed Oil": {
             "category": "Nutritional Supplement",
             "sub category ": "EFA",
-            "total surveyed": "0",
+            "total surveyed": "58",
             "overall benefit": "1.2",
             "overall adverse": "0.1"
         },
         "Krill Oil": {
             "category": "Nutritional Supplement",
             "sub category ": "EFA",
-            "total surveyed": "0",
+            "total surveyed": "164",
             "overall benefit": "1.5",
             "overall adverse": "0.2"
         },
         "Omega 3": {
             "category": "Nutritional Supplement",
             "sub category ": "EFA",
-            "total surveyed": "0",
+            "total surveyed": "188",
             "overall benefit": "1.8",
             "overall adverse": "0"
         },
         "Omega 6": {
             "category": "Nutritional Supplement",
             "sub category ": "EFA",
-            "total surveyed": "0",
+            "total surveyed": "68",
             "overall benefit": "2",
             "overall adverse": "0"
         },
         "General Glutathione": {
             "category": "Nutritional Supplement",
             "sub category ": "Glutiathone-Related Treatments",
-            "total surveyed": "0",
+            "total surveyed": "62",
             "overall benefit": "1.7",
             "overall adverse": "0.1"
         },
@@ -261,315 +261,315 @@
         "Oral Glutathione": {
             "category": "Nutritional Supplement",
             "sub category ": "Glutiathone-Related Treatments",
-            "total surveyed": "0",
+            "total surveyed": "42",
             "overall benefit": "1.5",
             "overall adverse": "0"
         },
         "Oral NAC": {
             "category": "Nutritional Supplement",
             "sub category ": "Glutiathone-Related Treatments",
-            "total surveyed": "0",
+            "total surveyed": "49",
             "overall benefit": "1.4",
             "overall adverse": "0.3"
         },
         "Transdermal Glutathione": {
             "category": "Nutritional Supplement",
             "sub category ": "Glutiathone-Related Treatments",
-            "total surveyed": "0",
+            "total surveyed": "27",
             "overall benefit": "1.1",
             "overall adverse": "0.2"
         },
         "Chromium": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
-            "total surveyed": "0",
+            "total surveyed": "19",
             "overall benefit": "1.8",
             "overall adverse": "0"
         },
         "Calcium": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
-            "total surveyed": "0",
+            "total surveyed": "110",
             "overall benefit": "1.7",
             "overall adverse": "0.1"
         },
         "Iodine": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
-            "total surveyed": "0",
+            "total surveyed": "20",
             "overall benefit": "1.5",
             "overall adverse": "0.2"
         },
         "Iron": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
-            "total surveyed": "0",
+            "total surveyed": "76",
             "overall benefit": "1.9",
             "overall adverse": "0.3"
         },
         "Lithium": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
-            "total surveyed": "0",
+            "total surveyed": "21",
             "overall benefit": "1.6",
             "overall adverse": "0"
         },
         "Magnesium": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
-            "total surveyed": "0",
+            "total surveyed": "153",
             "overall benefit": "1.9",
             "overall adverse": "0.1"
         },
         "Potassium": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
-            "total surveyed": "0",
+            "total surveyed": "26",
             "overall benefit": "2.1",
             "overall adverse": "0"
         },
         "Selenium": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
-            "total surveyed": "0",
+            "total surveyed": "39",
             "overall benefit": "1.3",
             "overall adverse": "0"
         },
         "Zinc": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Minerals",
-            "total surveyed": "0",
+            "total surveyed": "124",
             "overall benefit": "1.7",
             "overall adverse": "0.1"
         },
         "Biotin": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "34",
             "overall benefit": "1.4",
             "overall adverse": "0"
         },
         "CoQ10": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "68",
             "overall benefit": "1.6",
             "overall adverse": "0"
         },
         "DMG": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "45",
             "overall benefit": "1.2",
             "overall adverse": "0.2"
         },
         "Folic Acid": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "25",
             "overall benefit": "1.6",
             "overall adverse": "0.1"
         },
         "Folinic Acid, high dose": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "21",
             "overall benefit": "2.2",
             "overall adverse": "0.3"
         },
         "Folinic Acid, moderate dose": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "25",
             "overall benefit": "1.8",
             "overall adverse": "0.2"
         },
         "Inositol": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "21",
             "overall benefit": "1.3",
             "overall adverse": "0.2"
         },
         "PSP": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "25",
             "overall benefit": "1.8",
             "overall adverse": "0.2"
         },
         "TMG": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "28",
             "overall benefit": "1",
             "overall adverse": "0.3"
         },
         "Vitamin A (as cod liver oil)": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "31",
             "overall benefit": "1.6",
             "overall adverse": "0.1"
         },
         "Vitamin A (not as cod liver oil)": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "34",
             "overall benefit": "1.6",
             "overall adverse": "0.1"
         },
         "Vitamin B1": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "34",
             "overall benefit": "1.5",
             "overall adverse": "0.1"
         },
         "Vitamin B2": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "29",
             "overall benefit": "1.5",
             "overall adverse": "0.1"
         },
         "Vitamin B3": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "26",
             "overall benefit": "1.5",
             "overall adverse": "0.2"
         },
         "Vitamin B5": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "20",
             "overall benefit": "1.3",
             "overall adverse": "0"
         },
         "Vitamin B6, medium dose": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "40",
             "overall benefit": "1.3",
             "overall adverse": "0.1"
         },
         "Vitamin B12 (Injected)": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "99",
             "overall benefit": "1.8",
             "overall adverse": "0.3"
         },
         "Vitamin B12 (Oral)": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "152",
             "overall benefit": "1.5",
             "overall adverse": "0.1"
         },
         "Vitamin C": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "182",
             "overall benefit": "1.9",
             "overall adverse": "0.1"
         },
         "Vitamin D": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "159",
             "overall benefit": "1.9",
             "overall adverse": "0"
         },
         "Vitamin E": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "52",
             "overall benefit": "1.6",
             "overall adverse": "0"
         },
         "Vitamin K": {
             "category": "Nutritional Supplement",
             "sub category ": "Individual Vitamins",
-            "total surveyed": "0",
+            "total surveyed": "29",
             "overall benefit": "1.4",
             "overall adverse": "0"
         },
         "High Dose MultiVitamin": {
             "category": "Nutritional Supplement",
             "sub category ": "MultiVitamins",
-            "total surveyed": "0",
+            "total surveyed": "46",
             "overall benefit": "1.9",
             "overall adverse": "0.2"
         },
         "High Dose MultiVitamin for Children or Adults with ASD": {
             "category": "Nutritional Supplement",
             "sub category ": "MultiVitamins",
-            "total surveyed": "0",
+            "total surveyed": "103",
             "overall benefit": "1.8",
             "overall adverse": "0.2"
         },
         "Generic Child or Adult MultiVitamin": {
             "category": "Nutritional Supplement",
             "sub category ": "MultiVitamins",
-            "total surveyed": "0",
+            "total surveyed": "436",
             "overall benefit": "1.4",
             "overall adverse": "0"
         },
         "Melatonin": {
             "category": "Nutritional Supplement",
             "sub category ": "Sleep Treatment ",
-            "total surveyed": "0",
+            "total surveyed": "367",
             "overall benefit": "2.1",
             "overall adverse": "0.3"
         },
         "Valerian Root": {
             "category": "Nutritional Supplement",
             "sub category ": "Sleep Treatment ",
-            "total surveyed": "0",
+            "total surveyed": "38",
             "overall benefit": "1.2",
             "overall adverse": "0.3"
         },
         "5-HTP": {
             "category": "Nutritional Supplement",
             "sub category ": "Sleep Treatment ",
-            "total surveyed": "0",
+            "total surveyed": "45",
             "overall benefit": "1.8",
             "overall adverse": "0.1"
         },
         "GABA": {
             "category": "Nutritional Supplement",
             "sub category ": "Other",
-            "total surveyed": "0",
+            "total surveyed": "69",
             "overall benefit": "1.3",
             "overall adverse": "0.2"
         },
         "Fruit or Vegetable Powder Concentrate": {
             "category": "Nutritional Supplement",
             "sub category ": "Other",
-            "total surveyed": "0",
+            "total surveyed": "21",
             "overall benefit": "2.2",
             "overall adverse": "0"
         },
         "Milk Thistle": {
             "category": "Nutritional Supplement",
             "sub category ": "Other",
-            "total surveyed": "0",
+            "total surveyed": "28",
             "overall benefit": "1.5",
             "overall adverse": "0"
         },
         "Carntine": {
             "category": "Nutritional Supplement",
             "sub category ": "Other",
-            "total surveyed": "0",
+            "total surveyed": "54",
             "overall benefit": "1.3",
             "overall adverse": "0.1"
         },
         "Epsom Salt": {
             "category": "Nutritional Supplement",
             "sub category ": "Other",
-            "total surveyed": "0",
+            "total surveyed": "141",
             "overall benefit": "1.6",
             "overall adverse": "0"
         },
@@ -577,239 +577,239 @@
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "112",
-            "overall benefit": "2.2",
-            "overall adverse": "2.5"
+            "overall benefit": "1.2",
+            "overall adverse": "1.5"
         },
-        "Aripiprazole": {
+        "Aripiprazole (Abilify)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "81",
-            "overall benefit": "2.6",
-            "overall adverse": "2"
+            "overall benefit": "1.6",
+            "overall adverse": "1"
         },
-        "Atomoxetine": {
+        "Atomoxetine (Strattera)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "61",
-            "overall benefit": "2.3",
-            "overall adverse": "1.9"
+            "overall benefit": "1.3",
+            "overall adverse": "0.9"
         },
-        "Buspirone": {
+        "Buspirone (Buspar or Vanspar)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "33",
-            "overall benefit": "2.5",
-            "overall adverse": "1.6"
+            "overall benefit": "1.5",
+            "overall adverse": "0.6"
         },
-        "Carbamazepine": {
+        "Carbamazepine (Tegretol or Carbatrol or Epitol)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "26",
-            "overall benefit": "2.3",
-            "overall adverse": "2"
+            "overall benefit": "1.3",
+            "overall adverse": "1"
         },
-        "Citalopram": {
+        "Citalopram (CeleXA)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "32",
-            "overall benefit": "2.2",
-            "overall adverse": "2"
+            "overall benefit": "1.2",
+            "overall adverse": "1"
         },
-        "Clonazepam": {
+        "Clonazepam (Klonopin)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "54",
-            "overall benefit": "2.2",
-            "overall adverse": "2.1"
+            "overall benefit": "1.2",
+            "overall adverse": "1.1"
         },
-        "Clonidine": {
+        "Clonidine (Catapres or Kapvay)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "81",
-            "overall benefit": "2.7",
-            "overall adverse": "1.8"
+            "overall benefit": "1.7",
+            "overall adverse": "0.8"
         },
-        "Dexmethylphenidate": {
+        "Dexmethylphenidate (Focalin)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "44",
-            "overall benefit": "2.5",
-            "overall adverse": "2"
+            "overall benefit": "1.5",
+            "overall adverse": "1"
         },
-        "Diazepam": {
+        "Diazepam (Valium)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "27",
-            "overall benefit": "2.5",
-            "overall adverse": "2"
+            "overall benefit": "1.5",
+            "overall adverse": "1"
         },
-        "Divalproex Sodium": {
+        "Divalproex Sodium (Depakote)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "49",
-            "overall benefit": "2.2",
-            "overall adverse": "2.2"
+            "overall benefit": "1.2",
+            "overall adverse": "1.2"
         },
-        "Escitalopram": {
+        "Escitalopram (Lexapro)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "36",
-            "overall benefit": "2",
-            "overall adverse": "2"
+            "overall benefit": "1",
+            "overall adverse": "1"
         },
-        "Fluoxetine": {
+        "Fluoxetine (Prozac or Sarafem or Rapidflux)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "93",
-            "overall benefit": "2.5",
-            "overall adverse": "1.8"
+            "overall benefit": "1.5",
+            "overall adverse": "0.8"
         },
-        "Gabapentin": {
+        "Gabapentin (Neurontin or Gralise or Horizant)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "21",
-            "overall benefit": "2.6",
-            "overall adverse": "1.6"
+            "overall benefit": "1.6",
+            "overall adverse": "0.6"
         },
-        "Guanfacine": {
+        "Guanfacine (Intuniv or Tenex)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "76",
-            "overall benefit": "2.5",
-            "overall adverse": "1.8"
+            "overall benefit": "1.5",
+            "overall adverse": "0.8"
         },
-        "Lamotrigine": {
+        "Lamotrigine (Lamictal)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "42",
-            "overall benefit": "3",
-            "overall adverse": "1.8"
+            "overall benefit": "2",
+            "overall adverse": "0.8"
         },
-        "Levetiracetam": {
+        "Levetiracetam (Keppra)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "24",
-            "overall benefit": "2.7",
-            "overall adverse": "2.1"
+            "overall benefit": "1.7",
+            "overall adverse": "1.1"
         },
-        "Methylphenidate": {
+        "Methylphenidate (Ritalin or Medate or Concerta)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "114",
-            "overall benefit": "2.5",
-            "overall adverse": "2.4"
+            "overall benefit": "1.5",
+            "overall adverse": "1.4"
         },
-        "Olanzapine": {
+        "Olanzapine (Zyprexa)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "21",
-            "overall benefit": "1.9",
-            "overall adverse": "2.5"
+            "overall benefit": "0.9",
+            "overall adverse": "1.5"
         },
-        "Oxcarbazepine": {
+        "Oxcarbazepine (Oxtellar or Trileptal)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "22",
-            "overall benefit": "2.9",
-            "overall adverse": "1.8"
+            "overall benefit": "1.9",
+            "overall adverse": "0.8"
         },
-        "Quetiapine": {
+        "Quetiapine (Seroquel)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "40",
-            "overall benefit": "2.1",
-            "overall adverse": "2.5"
+            "overall benefit": "1.1",
+            "overall adverse": "1.5"
         },
-        "Risperidone": {
+        "Risperidone (Risperdal)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "150",
-            "overall benefit": "2.8",
-            "overall adverse": "2.5"
+            "overall benefit": "1.8",
+            "overall adverse": "1.5"
         },
-        "Sertraline": {
+        "Sertraline (Zoloft)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "87",
-            "overall benefit": "2.6",
-            "overall adverse": "1.8"
+            "overall benefit": "1.6",
+            "overall adverse": "0.8"
         },
-        "Topiramate": {
+        "Topiramate (Qudexy or Topamax)": {
             "category": "Psych or Seizure Medication",
             "sub category ": "Psych or Seizure Medication",
             "total surveyed": "23",
-            "overall benefit": "2.3",
-            "overall adverse": "2.6"
+            "overall benefit": "1.3",
+            "overall adverse": "1.6"
         },
         "Casein-Free": {
             "category": "Diet",
             "sub category ": "Diet",
             "total surveyed": "112",
-            "overall benefit": "3.2",
-            "overall adverse": "1.1"
+            "overall benefit": "2.2",
+            "overall adverse": "0.1"
         },
         "Corn-free": {
             "category": "Diet",
             "sub category ": "Diet",
             "total surveyed": "42",
-            "overall benefit": "3.4",
-            "overall adverse": "1"
+            "overall benefit": "2.4",
+            "overall adverse": "0"
         },
         "Feingold Diet": {
             "category": "Diet",
             "sub category ": "Diet",
             "total surveyed": "69",
-            "overall benefit": "3.6",
-            "overall adverse": "1"
+            "overall benefit": "2.6",
+            "overall adverse": "0"
         },
         "Food-Avoidance": {
             "category": "Diet",
             "sub category ": "Diet",
             "total surveyed": "71",
-            "overall benefit": "3.6",
-            "overall adverse": "1.2"
+            "overall benefit": "2.6",
+            "overall adverse": "0.2"
         },
         "GFCF": {
             "category": "Diet",
             "sub category ": "Diet",
             "total surveyed": "200",
-            "overall benefit": "3.5",
-            "overall adverse": "1.1"
+            "overall benefit": "2.5",
+            "overall adverse": "0.1"
         },
         "Gluten-Free": {
             "category": "Diet",
             "sub category ": "Diet",
             "total surveyed": "100",
-            "overall benefit": "3.1",
-            "overall adverse": "1"
+            "overall benefit": "2.1",
+            "overall adverse": "0"
         },
         "Healthy diet": {
             "category": "Diet",
             "sub category ": "Diet",
             "total surveyed": "161",
-            "overall benefit": "3.8",
-            "overall adverse": "1"
+            "overall benefit": "2.8",
+            "overall adverse": "0"
         },
         "Low-Sugar": {
             "category": "Diet",
             "sub category ": "Diet",
             "total surveyed": "83",
-            "overall benefit": "3.6",
-            "overall adverse": "1.1"
+            "overall benefit": "2.6",
+            "overall adverse": "0.1"
         },
         "Soy-free": {
             "category": "Diet",
             "sub category ": "Diet",
             "total surveyed": "58",
-            "overall benefit": "3.3",
-            "overall adverse": "1"
+            "overall benefit": "2.3",
+            "overall adverse": "0"
         },
         "Specific Carbohydrate Diet": {
             "category": "Diet",
             "sub category ": "Diet",
             "total surveyed": "30",
-            "overall benefit": "3.4",
-            "overall adverse": "1.2"
+            "overall benefit": "2.4",
+            "overall adverse": "0.2"
         }
     },
     "treatmentSymptoms": {
@@ -2373,7 +2373,7 @@
             "Stimming": "2%",
             "Tics": "3%"
         },
-        "Aripiprazole": {
+        "Aripiprazole (Abilify)": {
             "Aggression": "44%",
             "Anxiety": "25%",
             "Attention": "5%",
@@ -2399,7 +2399,7 @@
             "Stimming": "1%",
             "Tics": "4%"
         },
-        "Atomoxetine": {
+        "Atomoxetine (Strattera)": {
             "Aggression": "13%",
             "Anxiety": "16%",
             "Attention": "41%",
@@ -2425,7 +2425,7 @@
             "Stimming": "3%",
             "Tics": "2%"
         },
-        "Buspirone": {
+        "Buspirone (Buspar or Vanspar)": {
             "Aggression": "12%",
             "Anxiety": "48%",
             "Attention": "6%",
@@ -2451,7 +2451,7 @@
             "Stimming": "3%",
             "Tics": "0%"
         },
-        "Carbamazepine": {
+        "Carbamazepine (Tegretol or Carbatrol or Epitol)": {
             "Aggression": "27%",
             "Anxiety": "23%",
             "Attention": "8%",
@@ -2477,7 +2477,7 @@
             "Stimming": "4%",
             "Tics": "0%"
         },
-        "Citalopram": {
+        "Citalopram (CeleXA)": {
             "Aggression": "12%",
             "Anxiety": "41%",
             "Attention": "9%",
@@ -2503,7 +2503,7 @@
             "Stimming": "0%",
             "Tics": "3%"
         },
-        "Clonazepam": {
+        "Clonazepam (Klonopin)": {
             "Aggression": "15%",
             "Anxiety": "26%",
             "Attention": "6%",
@@ -2529,7 +2529,7 @@
             "Stimming": "4%",
             "Tics": "6%"
         },
-        "Clonidine": {
+        "Clonidine (Catapres or Kapvay)": {
             "Aggression": "12%",
             "Anxiety": "15%",
             "Attention": "11%",
@@ -2555,7 +2555,7 @@
             "Stimming": "0%",
             "Tics": "0%"
         },
-        "Dexmethylphenidate": {
+        "Dexmethylphenidate (Focalin)": {
             "Aggression": "11%",
             "Anxiety": "16%",
             "Attention": "52%",
@@ -2581,7 +2581,7 @@
             "Stimming": "5%",
             "Tics": "5%"
         },
-        "Diazepam": {
+        "Diazepam (Valium)": {
             "Aggression": "19%",
             "Anxiety": "30%",
             "Attention": "0%",
@@ -2607,7 +2607,7 @@
             "Stimming": "4%",
             "Tics": "0%"
         },
-        "Divalproex Sodium": {
+        "Divalproex Sodium (Depakote)": {
             "Aggression": "16%",
             "Anxiety": "18%",
             "Attention": "6%",
@@ -2633,7 +2633,7 @@
             "Stimming": "2%",
             "Tics": "0%"
         },
-        "Escitalopram": {
+        "Escitalopram (Lexapro)": {
             "Aggression": "14%",
             "Anxiety": "33%",
             "Attention": "8%",
@@ -2659,7 +2659,7 @@
             "Stimming": "0%",
             "Tics": "0%"
         },
-        "Fluoxetine": {
+        "Fluoxetine (Prozac or Sarafem or Rapidflux)": {
             "Aggression": "13%",
             "Anxiety": "47%",
             "Attention": "9%",
@@ -2685,7 +2685,7 @@
             "Stimming": "4%",
             "Tics": "0%"
         },
-        "Gabapentin": {
+        "Gabapentin (Neurontin or Gralise or Horizant)": {
             "Aggression": "0%",
             "Anxiety": "19%",
             "Attention": "5%",
@@ -2711,7 +2711,7 @@
             "Stimming": "0%",
             "Tics": "0%"
         },
-        "Guanfacine": {
+        "Guanfacine (Intuniv or Tenex)": {
             "Aggression": "21%",
             "Anxiety": "18%",
             "Attention": "29%",
@@ -2737,7 +2737,7 @@
             "Stimming": "0%",
             "Tics": "8%"
         },
-        "Lamotrigine": {
+        "Lamotrigine (Lamictal)": {
             "Aggression": "24%",
             "Anxiety": "14%",
             "Attention": "2%",
@@ -2763,7 +2763,7 @@
             "Stimming": "0%",
             "Tics": "0%"
         },
-        "Levetiracetam": {
+        "Levetiracetam (Keppra)": {
             "Aggression": "4%",
             "Anxiety": "8%",
             "Attention": "0%",
@@ -2789,7 +2789,7 @@
             "Stimming": "0%",
             "Tics": "0%"
         },
-        "Methylphenidate": {
+        "Methylphenidate (Ritalin or Medate or Concerta)": {
             "Aggression": "8%",
             "Anxiety": "11%",
             "Attention": "52%",
@@ -2815,7 +2815,7 @@
             "Stimming": "3%",
             "Tics": "3%"
         },
-        "Olanzapine": {
+        "Olanzapine (Zyprexa)": {
             "Aggression": "29%",
             "Anxiety": "19%",
             "Attention": "0%",
@@ -2841,7 +2841,7 @@
             "Stimming": "5%",
             "Tics": "0%"
         },
-        "Oxcarbazepine": {
+        "Oxcarbazepine (Oxtellar or Trileptal)": {
             "Aggression": "36%",
             "Anxiety": "27%",
             "Attention": "5%",
@@ -2867,7 +2867,7 @@
             "Stimming": "5%",
             "Tics": "0%"
         },
-        "Quetiapine": {
+        "Quetiapine (Seroquel)": {
             "Aggression": "38%",
             "Anxiety": "18%",
             "Attention": "2%",
@@ -2893,7 +2893,7 @@
             "Stimming": "0%",
             "Tics": "2%"
         },
-        "Risperidone": {
+        "Risperidone (Risperdal)": {
             "Aggression": "49%",
             "Anxiety": "27%",
             "Attention": "9%",
@@ -2919,7 +2919,7 @@
             "Stimming": "7%",
             "Tics": "4%"
         },
-        "Sertraline": {
+        "Sertraline (Zoloft)": {
             "Aggression": "10%",
             "Anxiety": "62%",
             "Attention": "5%",
@@ -2945,7 +2945,7 @@
             "Stimming": "3%",
             "Tics": "5%"
         },
-        "Topiramate": {
+        "Topiramate (Qudexy or Topamax)": {
             "Aggression": "9%",
             "Anxiety": "4%",
             "Attention": "4%",
@@ -4853,7 +4853,7 @@
             "Weight gain": "4%",
             "Weight loss": "13%"
         },
-        "Aripiprazole": {
+        "Aripiprazole (Abilify)": {
             "Aggression": "17%",
             "Anxiety": "12%",
             "Bladder": "9%",
@@ -4880,7 +4880,7 @@
             "Weight gain": "23%",
             "Weight loss": "0%"
         },
-        "Atomoxetine": {
+        "Atomoxetine (Strattera)": {
             "Aggression": "18%",
             "Anxiety": "8%",
             "Bladder": "13%",
@@ -4907,7 +4907,7 @@
             "Weight gain": "2%",
             "Weight loss": "2%"
         },
-        "Buspirone": {
+        "Buspirone (Buspar or Vanspar)": {
             "Aggression": "9%",
             "Anxiety": "15%",
             "Bladder": "6%",
@@ -4934,7 +4934,7 @@
             "Weight gain": "9%",
             "Weight loss": "0%"
         },
-        "Carbamazepine": {
+        "Carbamazepine (Tegretol or Carbatrol or Epitol)": {
             "Aggression": "8%",
             "Anxiety": "8%",
             "Bladder": "4%",
@@ -4961,7 +4961,7 @@
             "Weight gain": "15%",
             "Weight loss": "4%"
         },
-        "Citalopram": {
+        "Citalopram (CeleXA)": {
             "Aggression": "22%",
             "Anxiety": "16%",
             "Bladder": "22%",
@@ -4988,7 +4988,7 @@
             "Weight gain": "3%",
             "Weight loss": "3%"
         },
-        "Clonazepam": {
+        "Clonazepam (Klonopin)": {
             "Aggression": "13%",
             "Anxiety": "7%",
             "Bladder": "9%",
@@ -5015,7 +5015,7 @@
             "Weight gain": "2%",
             "Weight loss": "2%"
         },
-        "Clonidine": {
+        "Clonidine (Catapres or Kapvay)": {
             "Aggression": "12%",
             "Anxiety": "6%",
             "Bladder": "9%",
@@ -5042,7 +5042,7 @@
             "Weight gain": "0%",
             "Weight loss": "4%"
         },
-        "Dexmethylphenidate": {
+        "Dexmethylphenidate (Focalin)": {
             "Aggression": "16%",
             "Anxiety": "11%",
             "Bladder": "7%",
@@ -5069,7 +5069,7 @@
             "Weight gain": "0%",
             "Weight loss": "18%"
         },
-        "Diazepam": {
+        "Diazepam (Valium)": {
             "Aggression": "7%",
             "Anxiety": "15%",
             "Bladder": "4%",
@@ -5096,7 +5096,7 @@
             "Weight gain": "0%",
             "Weight loss": "0%"
         },
-        "Divalproex Sodium": {
+        "Divalproex Sodium (Depakote)": {
             "Aggression": "6%",
             "Anxiety": "6%",
             "Bladder": "6%",
@@ -5123,7 +5123,7 @@
             "Weight gain": "16%",
             "Weight loss": "6%"
         },
-        "Escitalopram": {
+        "Escitalopram (Lexapro)": {
             "Aggression": "17%",
             "Anxiety": "19%",
             "Bladder": "8%",
@@ -5150,7 +5150,7 @@
             "Weight gain": "0%",
             "Weight loss": "6%"
         },
-        "Fluoxetine": {
+        "Fluoxetine (Prozac or Sarafem or Rapidflux)": {
             "Aggression": "12%",
             "Anxiety": "9%",
             "Bladder": "8%",
@@ -5177,7 +5177,7 @@
             "Weight gain": "8%",
             "Weight loss": "1%"
         },
-        "Gabapentin": {
+        "Gabapentin (Neurontin or Gralise or Horizant)": {
             "Aggression": "5%",
             "Anxiety": "10%",
             "Bladder": "0%",
@@ -5204,7 +5204,7 @@
             "Weight gain": "0%",
             "Weight loss": "0%"
         },
-        "Guanfacine": {
+        "Guanfacine (Intuniv or Tenex)": {
             "Aggression": "14%",
             "Anxiety": "7%",
             "Bladder": "7%",
@@ -5231,7 +5231,7 @@
             "Weight gain": "9%",
             "Weight loss": "3%"
         },
-        "Lamotrigine": {
+        "Lamotrigine (Lamictal)": {
             "Aggression": "5%",
             "Anxiety": "2%",
             "Bladder": "2%",
@@ -5258,7 +5258,7 @@
             "Weight gain": "5%",
             "Weight loss": "2%"
         },
-        "Levetiracetam": {
+        "Levetiracetam (Keppra)": {
             "Aggression": "29%",
             "Anxiety": "25%",
             "Bladder": "21%",
@@ -5285,7 +5285,7 @@
             "Weight gain": "0%",
             "Weight loss": "0%"
         },
-        "Methylphenidate": {
+        "Methylphenidate (Ritalin or Medate or Concerta)": {
             "Aggression": "25%",
             "Anxiety": "24%",
             "Bladder": "18%",
@@ -5312,7 +5312,7 @@
             "Weight gain": "2%",
             "Weight loss": "12%"
         },
-        "Olanzapine": {
+        "Olanzapine (Zyprexa)": {
             "Aggression": "19%",
             "Anxiety": "5%",
             "Bladder": "14%",
@@ -5339,7 +5339,7 @@
             "Weight gain": "43%",
             "Weight loss": "0%"
         },
-        "Oxcarbazepine": {
+        "Oxcarbazepine (Oxtellar or Trileptal)": {
             "Aggression": "0%",
             "Anxiety": "14%",
             "Bladder": "5%",
@@ -5366,7 +5366,7 @@
             "Weight gain": "9%",
             "Weight loss": "0%"
         },
-        "Quetiapine": {
+        "Quetiapine (Seroquel)": {
             "Aggression": "20%",
             "Anxiety": "8%",
             "Bladder": "10%",
@@ -5393,7 +5393,7 @@
             "Weight gain": "28%",
             "Weight loss": "2%"
         },
-        "Risperidone": {
+        "Risperidone (Risperdal)": {
             "Aggression": "9%",
             "Anxiety": "10%",
             "Bladder": "8%",
@@ -5420,7 +5420,7 @@
             "Weight gain": "39%",
             "Weight loss": "2%"
         },
-        "Sertraline": {
+        "Sertraline (Zoloft)": {
             "Aggression": "7%",
             "Anxiety": "6%",
             "Bladder": "5%",
@@ -5447,7 +5447,7 @@
             "Weight gain": "8%",
             "Weight loss": "1%"
         },
-        "Topiramate": {
+        "Topiramate (Qudexy or Topamax)": {
             "Aggression": "13%",
             "Anxiety": "9%",
             "Bladder": "4%",
