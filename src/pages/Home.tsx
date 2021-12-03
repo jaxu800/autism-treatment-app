@@ -6,10 +6,9 @@ import { IonContent, IonHeader,
   IonCardTitle, IonIcon,
 } from '@ionic/react';
 import './Tab1.css';
-import { book, medkit, home } from 'ionicons/icons';
-
 
 const Home: React.FC = () => {
+
   return (
     <IonPage>
       <IonHeader>

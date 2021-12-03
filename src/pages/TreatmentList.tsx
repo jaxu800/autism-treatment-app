@@ -18,8 +18,8 @@ const TreatmentList: React.FC<{selectedValue:string}> = ({selectedValue}) => {
       get(child(dbRef, `treatments`)).then((snapshot) => {
         if (snapshot.exists()) {
           snapshot.forEach((childSnapshot) => {
-          var key = childSnapshot.key;
-          treatmentList.push(String(childSnapshot.key));
+            var key = childSnapshot.key;
+            treatmentList.push(String(childSnapshot.key));
           });
           var nutraTemp:string[] = [];
           var psychTemp:string[] = [];

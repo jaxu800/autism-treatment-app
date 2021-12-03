@@ -22,6 +22,7 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
   const [numSurveyed, setNumSurveyed] = useState(0);
   const [treatmentType, setTreatmentType] = useState("");
   const [analysis, setAnalysis] = useState("");
+  
   const loadData = () => {
     var overallDataTemp:number[] = [];
     var dbref = ref(getDatabase())
