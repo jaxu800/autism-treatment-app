@@ -12,8 +12,8 @@ const TreatmentList: React.FC = () => {
         var treatmentList:string[]  = [];
         if (snapshot.exists()) {
           snapshot.forEach((childSnapshot) => {
-          var key = childSnapshot.key;
-          treatmentList.push(String(childSnapshot.key));
+            var key = childSnapshot.key;
+            treatmentList.push(String(childSnapshot.key));
           });
         } else {
           console.log("No data available");

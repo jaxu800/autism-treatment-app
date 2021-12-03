@@ -6,10 +6,10 @@ import {
   IonBackButton, IonItemGroup,
 } from "@ionic/react";
 import { RouteComponentProps } from "react-router";
-import { Bar } from "react-chartjs-2";
+import Chart, { Bar } from "react-chartjs-2";
 import "./SymptomContainer.css";
-import React, { useEffect, useState } from 'react';
-
+import React, { useEffect, useState, MouseEvent } from 'react';
+import { getDatabase, ref, onValue, get, child, } from 'firebase/database'
 
 interface symptomsDetailsProps
   extends RouteComponentProps<{
@@ -17,27 +17,38 @@ interface symptomsDetailsProps
   }> {}
 
 const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
-  const[data,setData] = useState([{}])
+  const[treatmentss,setTreatments] = useState({})
+  
+
+  const loadData = () => {
+    var dbref = ref(getDatabase())
+    get(child(dbref, `symptoms/${match.params.temp}`)).then((snapshot) => {
+      var temp:Object = 0;
+      if (snapshot.exists()){
+        temp = snapshot.toJSON()!
+        var sortableArray = Object.entries(temp);
+        var sortedArray = sortableArray.sort(([, b], [, a]) => a - b);
+        var sortedObject = Object.fromEntries(sortedArray); 
+        temp = sortedObject
+        console.log(sortedObject)
+      } else {
+        console.log("No data available");
+      }
+      setTreatments(temp)
+    }).catch((error) => {
+      console.error(error);
+    });
+  }
 
   useEffect(() => {
-      fetch('/symptomsList/symp', {
-        method: 'POST',
-        body: JSON.stringify({
-          content:`${match.params.temp}`
-        })
-      }).then((response) => {
-        if (response.ok){
-          return response.json()
-        }
-      }).then(
-        (data) => {
-          console.log(data)
-          setData(data)
-        }
-      )
-  },[])
+    loadData()
+  }, []);
 
-  var treatments = Object.keys(data);
+  var treatments = Object.keys(treatmentss);
+
+  const handleMouseEvent = (e: MouseEvent<HTMLElement>) => {
+
+  }
 
   const repeatedArray = [].concat(
     ...Array(20).fill([
@@ -49,7 +60,7 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
     ])
   );
 
-  const treatementsRating = {
+  const treatmentsRating = {
     labels: treatments,
     datasets: [
       {
@@ -57,7 +68,7 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
         backgroundColor: repeatedArray,
         borderColor: repeatedArray,
         borderWidth: 2,
-        data: Object.values(data),
+        data: Object.values(treatmentss),
       },
     ],
   };
@@ -75,6 +86,8 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
     scales: {
       xAxes: [
         {
+          display:false,
+          overflow:true,
           scaleLabel: {
             display: false,
           },
@@ -141,8 +154,8 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
             >
               {match.params.temp}
             </h1>
-            <div className="container">
-              <Bar data={treatementsRating} options={treatmentOptions}></Bar>
+            <div className="graphExpander">
+              <Bar data={treatmentsRating} options={treatmentOptions}></Bar>
             </div>
           </div>
 
