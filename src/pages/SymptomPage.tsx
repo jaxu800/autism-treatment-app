@@ -4,10 +4,13 @@ import {
   IonToolbar, IonItem,
   IonLabel, IonButtons,
   IonBackButton, IonItemGroup,
+  IonPopover,IonIcon,
+  IonButton,
 } from "@ionic/react";
 import { RouteComponentProps } from "react-router";
 import Chart, { Bar } from "react-chartjs-2";
 import "./SymptomContainer.css";
+import {ellipsisVertical} from 'ionicons/icons';
 import React, { useEffect, useState, MouseEvent } from 'react';
 import { getDatabase, ref, onValue, get, child, } from 'firebase/database'
 
@@ -113,70 +116,72 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
     },
   };
 
+  const [popoverState, setShowPopover] = useState({ showPopover: false, event: undefined });
+  const [treatType, setTreatType] = useState<string>('diet');
+  const [sort, setSort] = useState<string>('overall');
+
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar className="new-background-color">
           <IonButtons slot="start">
-            <IonBackButton
-              defaultHref="/symptoms"
-              style={{
-                height: "var(--min-height)",
-                width: "var(--min-width)",
-                color: "var(--light-blue-1)",
-                display: "block",
-              }}
-            />
+	          <IonBackButton defaultHref="/symptoms" style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
           </IonButtons>
-          <IonTitle
-            style={{
-              padding: "8px",
-              color: "var(--light-blue-1)",
-              textAlign: "left",
-              fontSize: 22,
-              height: "65px",
-            }}
+	        <IonTitle style={{padding: '0px', color: 'var(--light-blue-1)', textAlign: "center", fontSize: 20, height: '65px'}}>Symptom Details</IonTitle>
+          <IonPopover
+            event={popoverState.event}
+            isOpen={popoverState.showPopover}
+            onDidDismiss={() => setShowPopover({ showPopover: false, event: undefined })}
           >
-            Symptom Details
-          </IonTitle>
+            <IonItem>
+              <IonContent>
+                <IonTitle style={{textAlign: 'center', height: '50px', fontSize: 30}}>About</IonTitle>
+                <p style={{fontFamily: 'var(--font-family-base)'}}>
+                  This page displays treatment ratings for this symptom, 
+                  with the most effective treatments having the highest scores. You have the option to 
+                  sort these treatments by Overall Benefit (ignoring adverse effects) 
+                  or by Net Benefit (factoring in adverse effects). 
+                  To learn more about each treatment, click on the name of the treatment in the list below.
+                </p>
+              </IonContent>
+            </IonItem>
+          </IonPopover>
+          <IonButton slot="end" color="light-blue-1" fill="clear" onClick={
+            (e: any) => {
+              e.persist();
+              setShowPopover({ showPopover: true, event: e})
+            }
+          }>
+            <IonIcon slot="icon-only" icon={ellipsisVertical} style={{color: '#e7eff6'}} />
+          </IonButton>
         </IonToolbar>
       </IonHeader>
 
       <IonContent fullscreen className="new-background-color-2">
         <>
-          <div className="starDiv" style={{ padding: "5px" }}>
-            <h1
-              style={{
-                color: "black",
-                fontWeight: "bold",
-                fontFamily: "sans-serif",
-              }}
-            >
-              {match.params.temp}
-            </h1>
-            <div className="graphExpander">
-              <Bar data={treatmentsRating} options={treatmentOptions}></Bar>
-            </div>
+        <div className="starDiv" style={{padding: '5px'}}>
+			    <h1 style={{color: 'black', fontWeight: 'bold', fontFamily: 'sans-serif'}}>{match.params.temp}</h1>
+          <div className="container">
+            <Bar data={treatmentsRating} options={treatmentOptions} ></Bar>
           </div>
+        </div>
 
-          <IonTitle style={{ padding: "10px", fontSize: "16" }}>
-            Top Rated Treatments
+          <IonTitle style={{padding: '10px', fontSize: 18, fontWeight: 'bold'}}>
+            Recomended Treatments
           </IonTitle>
 
           <IonItemGroup>
-            {treatments.map((elem) => {
-              return (
-                <IonItem
-                  className="new-background-color-3"
-                  button
-                  href={"treatments/" + elem}
-                  onClick={() => {}}
-                  detail
-                >
-                  <IonLabel>{elem}</IonLabel>
-                </IonItem>
-              );
-            })}
+          {
+          treatments.map(elem => {
+            return(
+              <IonItem className="new-background-color-2" button href={"treatments/" + elem} onClick={() => {}} detail>
+                <IonLabel>
+                  {elem}
+                </IonLabel>
+              </IonItem>
+            )
+          })
+          }
           </IonItemGroup>
         </>
       </IonContent>
