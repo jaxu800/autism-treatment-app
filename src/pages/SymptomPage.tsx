@@ -5,7 +5,7 @@ import {
   IonLabel, IonButtons,
   IonBackButton, IonItemGroup,
   IonPopover,IonIcon,
-  IonButton,
+  IonButton
 } from "@ionic/react";
 import { RouteComponentProps } from "react-router";
 import Chart, { Bar } from "react-chartjs-2";
@@ -125,7 +125,15 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
       <IonHeader>
         <IonToolbar className="new-background-color">
           <IonButtons slot="start">
-	          <IonBackButton defaultHref="/symptoms" style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
+            <IonBackButton
+              defaultHref="/symptoms"
+              style={{
+                height: "var(--min-height)",
+                width: "var(--min-width)",
+                color: "var(--light-blue-1)",
+                display: "block",
+              }}
+            />
           </IonButtons>
 	        <IonTitle style={{padding: '0px', color: 'var(--light-blue-1)', textAlign: "center", fontSize: 20, height: '65px'}}>Symptom Details</IonTitle>
           <IonPopover
@@ -164,26 +172,27 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
           <div className="container">
             <Bar data={treatmentsRating} options={treatmentOptions} ></Bar>
           </div>
-        </div>
 
-          <IonTitle style={{padding: '10px', fontSize: 16, fontWeight: 'bold'}}>
-            Top Recommended Treatments
+          <IonTitle style={{ padding: "10px", fontSize: "16" }}>
+            Top Rated Treatments
           </IonTitle>
 
           <IonItemGroup>
-          {
-          treatments.map(elem => {
-            return(
-              <IonItem className="new-background-color-2" button href={"treatments/" + elem} onClick={() => {}} detail>
-                <IonLabel>
-                  {elem}
-                </IonLabel>
-              </IonItem>
-            )
-          })
-          }
+            {treatments.map((elem) => {
+              return (
+                <IonItem
+                  className="new-background-color-2"
+                  button
+                  href={"treatments/" + elem}
+                  onClick={() => {}}
+                  detail
+                >
+                  <IonLabel>{elem}</IonLabel>
+                </IonItem>
+              );
+            })}
           </IonItemGroup>
-        </>
+        </div></>
       </IonContent>
     </IonPage>
   );
