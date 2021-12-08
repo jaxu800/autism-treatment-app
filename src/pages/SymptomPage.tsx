@@ -89,7 +89,7 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
     scales: {
       xAxes: [
         {
-          display:false,
+          display:true,
           overflow:true,
           scaleLabel: {
             display: false,
@@ -106,7 +106,7 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
       yAxes: [
         {
           overflow: true,
-          display: true,
+          display: false,
             ticks: {
                 suggestedMin: 0,
                 beginAtZero: true 
