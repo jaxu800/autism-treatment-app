@@ -89,7 +89,7 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
     scales: {
       xAxes: [
         {
-          display:false,
+          display:true,
           overflow:true,
           scaleLabel: {
             display: false,
@@ -106,7 +106,7 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
       yAxes: [
         {
           overflow: true,
-          display: true,
+          display: false,
             ticks: {
                 suggestedMin: 0,
                 beginAtZero: true 
@@ -166,8 +166,8 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
           </div>
         </div>
 
-          <IonTitle style={{padding: '10px', fontSize: 18, fontWeight: 'bold'}}>
-            Recomended Treatments
+          <IonTitle style={{padding: '10px', fontSize: 16, fontWeight: 'bold'}}>
+            Top Recommended Treatments
           </IonTitle>
 
           <IonItemGroup>
