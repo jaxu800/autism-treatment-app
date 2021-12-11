@@ -122,6 +122,7 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
 
   return (
     <IonPage>
+      {/*Back button, Header, and About tab*/}
       <IonHeader>
         <IonToolbar className="new-background-color">
           <IonButtons slot="start">
@@ -136,6 +137,7 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
             />
           </IonButtons>
 	        <IonTitle style={{padding: '0px', color: 'var(--light-blue-1)', textAlign: "center", fontSize: 20, height: '65px'}}>Symptom Details</IonTitle>
+          {/*Info button on right side of Header: when clicked, reveals the text shown below*/}
           <IonPopover
             event={popoverState.event}
             isOpen={popoverState.showPopover}
@@ -164,9 +166,11 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
           </IonButton>
         </IonToolbar>
       </IonHeader>
-
+      
+      {/*Symptoms info*/}
       <IonContent fullscreen className="new-background-color-2">
         <>
+        {/*Graph of sorted top treatments for the chosen symptom*/}
         <div className="starDiv" style={{padding: '5px'}}>
 			    <h1 style={{color: 'black', fontWeight: 'bold', fontFamily: 'sans-serif'}}>{match.params.temp}</h1>
           <div className="container">
@@ -177,6 +181,7 @@ const SymptomPage: React.FC<symptomsDetailsProps> = ({ match, history }) => {
             Top Rated Treatments
           </IonTitle>
 
+          {/*List clickable treatments to navigate to Treatment info page*/}
           <IonItemGroup>
             {treatments.map((elem) => {
               return (

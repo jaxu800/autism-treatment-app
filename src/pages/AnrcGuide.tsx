@@ -5,6 +5,7 @@ import './AnrcGuide.css';
 const AnrcGuide: React.FC = () => {
   return (
     <IonPage>
+      {/*Back button and Header*/}
       <IonHeader>
         <IonToolbar className="new-background-color">
           <IonButtons  slot="start">
@@ -14,6 +15,7 @@ const AnrcGuide: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       
+      {/*Text can be inputted in this area*/}
       <IonContent fullscreen className="new-background-color-2">
         <IonHeader collapse="condense">
           <IonToolbar>

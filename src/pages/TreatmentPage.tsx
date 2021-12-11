@@ -228,6 +228,7 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
   return (
     <IonPage>
 	    <IonHeader>
+        {/*Back button and Header*/}
         <IonToolbar className="new-background-color">
           <IonButtons  slot="start">
 			      <IonBackButton defaultHref="/treatments" style={{height: 'var(--min-height)', width: 'var(--min-width)', color: 'var(--light-blue-1)', display: 'block'}} />
@@ -239,6 +240,7 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
       <IonContent fullscreen className="new-background-color-2">
         <>
           <div className="starDiv" style={{padding: '5px'}}>
+            {/*Treatment name, stars, and number surveyed*/}
 			      <h1 style={{color: 'black', fontWeight: 'bold', fontSize: 24, fontFamily: 'sans-serif'}}>{match.params.temp}</h1>
             <p style={{fontFamily: 'sans-serif'}}>{treatmentType}</p>
 			      <p style={{fontFamily: 'sans-serif'}}>Overall Rating: <strong>{analysis}</strong></p>
@@ -246,12 +248,15 @@ const TreatmentPage: React.FC<treatmentDetailsProps> = ({match, history}) => {
 			      <p style={{fontFamily: 'sans-serif'}}><strong>{rating}</strong> out of 5</p>
             <p style={{fontFamily: 'sans-serif'}}>Rated by: {numSurveyed} people</p>  
           </div>
+          {/*First graph: positive vs. adverse rating*/}
 		      <div className="container">
 			      <Bar data={generalData} options={generalOptions}></Bar>
           </div>
+          {/*Second graph: positive effects by symptom*/}
           <div className="container">
 			      <HorizontalBar data={symptomsData} options={symptomsOptions}></HorizontalBar>
           </div>  
+          {/*Third graph: adverse effects by symptom*/}
           <div className="container">
 			      <HorizontalBar data={adverseData} options={adverseOptions}></HorizontalBar>
           </div>

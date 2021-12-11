@@ -2,6 +2,7 @@ import { IonItem, IonLabel, IonItemGroup  } from '@ionic/react';
 import { getDatabase, ref, get, child } from 'firebase/database'
 import React, { useState, useEffect, Component } from 'react';
 
+// This file gathers all treatments from the database and lists them in the Treatments page
 const TreatmentList: React.FC<{selectedValue:string}> = ({selectedValue}) => {
     
     //console.log("beginning")

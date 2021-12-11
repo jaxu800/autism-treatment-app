@@ -7,6 +7,8 @@ import { IonContent, IonHeader,
 } from '@ionic/react';
 import './Tab1.css';
 
+{/*This is the main Home page of the app. When the app is first opened, this page will appear. It contains
+cards leading to each of the 5 main other pages.*/}
 const Home: React.FC = () => {
 
   return (
@@ -26,7 +28,6 @@ const Home: React.FC = () => {
 
         <IonList style={{backgroundColor: 'var(--light-blue-1)'}}>
           <IonCard href="/treatments" style={{backgroundColor: 'white'}}>
-            {/*<img src="https://cdn.pixabay.com/photo/2020/11/03/15/31/doctor-5710152_1280.jpg"></img>*/}
             <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1191&q=80"></img>
             <IonCardHeader>
               <IonCardTitle style={{textAlign: 'center', fontSize: 17, color: 'black', fontWeight: 'bold'}}>Treatment Types</IonCardTitle>
@@ -62,7 +63,7 @@ const Home: React.FC = () => {
               <IonCardTitle style={{textAlign: 'center', fontSize: 17, color: 'black', fontWeight: 'bold'}}>Symptom Questionnaires</IonCardTitle>
             </IonCardHeader>
             <IonCardContent style={{color: 'var(--dark-gray)'}}>
-			  Find some different autism symptom assessments here
+			        Find some different autism symptom assessments here
             </IonCardContent>
           </IonCard>
 

@@ -30,6 +30,7 @@ const Symptoms: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
+        {/*Header*/}
         <IonToolbar className="new-background-color">
           <IonTitle
             style={{
@@ -45,6 +46,8 @@ const Symptoms: React.FC = () => {
         </IonToolbar>
       </IonHeader>
 
+      {/*Everything within IonMenu implements the filters button, but it is not yet completely
+      working. This will require editing to make functional.*/}
       <IonMenu side="start" menuId="first">
         <IonHeader>
           <IonToolbar className="new-background-color">
@@ -100,6 +103,7 @@ const Symptoms: React.FC = () => {
         </IonContent>
       </IonMenu>
 
+      {/*List of clickable symptoms*/}
       <IonContent fullscreen className="new-background-color-2">
         <IonHeader collapse="condense">
           <IonToolbar>
