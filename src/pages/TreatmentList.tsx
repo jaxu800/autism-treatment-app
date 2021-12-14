@@ -4,10 +4,8 @@ import React, { useState, useEffect, Component } from 'react';
 
 const TreatmentList: React.FC<{selectedValue:string}> = ({selectedValue}) => {
     
-    //console.log("beginning")
     const initArray: string[] = [];
     const [treatments, setTreatments] = useState(initArray);
-    //console.log("treatments have been unset")
     const [nutra, setNutra] = useState(initArray);
     const [psych, setPsych] = useState(initArray);
     const [diet, setDiet] = useState(initArray);
@@ -65,8 +63,6 @@ const TreatmentList: React.FC<{selectedValue:string}> = ({selectedValue}) => {
             finalList = diet;
           }
           setTreatments(finalList);
-          //console.log("when its set")
-          //console.log(treatments)
         } else {
           console.log("No data available");
         }
@@ -75,15 +71,8 @@ const TreatmentList: React.FC<{selectedValue:string}> = ({selectedValue}) => {
       });
     }
     useEffect(() => {
-      //console.log("useEffect before")
       loadData(selectedValue);
-      //console.log("useEffect after")
     }, [selectedValue]);
-    
-    //console.log("before return")
-    //console.log(treatments)
-    //console.log("right before return")
-
     
     return ( 
       <IonItemGroup>

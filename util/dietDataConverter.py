@@ -4,7 +4,18 @@ df = pd.read_csv('dietData.csv', encoding='ANSI', low_memory=False)
 medList = []
 medCategory = []
 medSubCategory = []
-definingDF = df.iloc[:,22:40]
+#Change these next next numbers when creating new datasets
+startOfOverallBenefitLineNumber = 22
+endOfOverallBenefitLineNumber = 39
+startOfOverallAdverseLineNumber = 535
+endOfOverallAdverseLineNumber = 552
+startOfSymptomRatings = 41
+endOfSymptomRatingsFirstTreatment = 64
+endOfSymptomRatingsAllTreatments = 506
+startOfSymptomAdverse = 554
+endOfSymptomAdverseFirstTreatment = 578
+endOfSymptomAdverseAllTreatments = 929
+definingDF = df.iloc[:,startOfOverallBenefitLineNumber:endOfOverallBenefitLineNumber+1]
 definingDF.dropna(how='all', axis=1, inplace=True, thresh=20)
 #print(definingDF)
 N = 10 #Starting Word Number of the Med in the Column String
@@ -28,7 +39,7 @@ finalDataF['total surveyed'] = numSurveyed
 overallBenefit = [round(num, 1) for num in overallBenefit]
 finalDataF['overall benefit'] = overallBenefit
 
-adverseDF = df.iloc[:,535:553]
+adverseDF = df.iloc[:,startOfOverallAdverseLineNumber:endOfOverallAdverseLineNumber+1]
 adverseDF.dropna(how='all', axis=1, inplace=True, thresh=20)
 overallAdverse = []
 for column in adverseDF:
@@ -37,7 +48,7 @@ overallAdverse = [round(num, 1) for num in overallAdverse]
 finalDataF['overall adverse'] = overallAdverse
 #print(finalDataF)
 
-symptomDFFirst = df.iloc[:,41:65]
+symptomDFFirst = df.iloc[:,startOfSymptomRatings:endOfSymptomRatingsFirstTreatment+1]
 symptomList = []
 for columnName in symptomDFFirst.columns:
     symptomName = columnName.split(':')[0]
@@ -59,7 +70,7 @@ symptomList.sort()
 numAnsweredPerTreat = definingDF.count().values.tolist()
 numAnsweredPerTreatDict = dict(zip(medList, numAnsweredPerTreat))
 
-symptomDFFull = df.iloc[:,41:507]
+symptomDFFull = df.iloc[:,startOfSymptomRatings:endOfSymptomRatingsAllTreatments]
 
 for symptomName in symptomList:
     symptomPercentages = []
@@ -75,7 +86,7 @@ for symptomName in symptomList:
 finalDataF[''] = ""
 #print(finalDataF)
     
-symptomAdverseDFFirst = df.iloc[:,554:579]
+symptomAdverseDFFirst = df.iloc[:,startOfSymptomAdverse:endOfSymptomAdverseFirstTreatment+1]
 symptomAdverseList = []
 for columnName in symptomAdverseDFFirst.columns:
     symptomName = columnName.split(':')[0]
@@ -92,7 +103,7 @@ for columnName in symptomAdverseDFFirst.columns:
     symptomAdverseList.append(symptomName)
     symptomAdverseList.sort()
  
-adverseDFFull = df.iloc[:,554:930]
+adverseDFFull = df.iloc[:,startOfSymptomAdverse:endOfSymptomAdverseAllTreatments]
 #print(symptomAdverseList)
 #print(medList)
 

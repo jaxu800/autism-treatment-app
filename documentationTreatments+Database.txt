@@ -1,0 +1,79 @@
+This file contains documentation for the treatments page as well as the Firebase database.
+
+Database Documentation:
+
+CURRENT OVERVIEW OF "util" FOLDER:
+dietData.csv: Contains the raw survey data for diets, provided by Prof. Adams
+dietDataParsed.csv: Contains parsed data from the diet survey, created by dietDataConverter.py
+dietDataConverter.py: Parses the raw diet survey data and converts it into usable format
+psychSeizureData.csv: Contains the raw survey data for psych and seizure meds, provided by Prof. Adams
+psychDataParsed.csv: Contains parsed data from the psych and seizure survey, created by SeizureDataConverter.py
+psychSeizureDataConverter.py: Parses the raw psych and seizure survey data and converts it into usable format
+fullData.csv: Contains parsed data from diets, nutritional supplements, and psych and seizure meds, manually created by copying csvs together
+fullData.json: Contains json version of the data, can be directly uploaded to Firebase console
+jsonConverter.py: Converts the parsed csv data into json format
+
+ADDING NEW TYPES OF TREATMENTS
+1. From the raw survey excel sheet provided by Prof. Adams, take the specific sheet you want to convert, and save it as a .csv file. It should be one csv file containing only one sheet.
+2. Create new .py file and copy code from psychSeizureDataConverter.py into new file
+3. Change the filename "psychSeizureData.csv" in line 3 to the name of the file created in step 1
+4. From line 8-17, manually look at the column numbers in the csv file to determine which values go into those variables
+For the startOf variables, put the exact column number where the specific entry starts.
+For the endOf variables, also put the exact column where the specific entry ends
+If they survey contains columns with an "other" option, (i.e. Enter the benefit for the other treatment), DO NOT include the other in the entry
+5. In the last line, change the filename to the name of the file you want to create (i.e. psychDataParsed.csv)
+6. Run the .py file you created in lines 2-5, it should produce a csv file in the same folder
+7. Open the newly generated .csv file in EXCEL, copy the information NOT INCLUDING THE LABELS and paste it into fullData.csv below the other 
+8. Before you run jsonConverter.py, you must first go into fullData.json, copy the first section listed as "symptoms", and keep it in your clipboard
+9. Run jsonConverter.py, the fullData.json file should now be updated, but without the symptoms section
+10. Paste the symptoms section into the fullData.json file at the top. This has to be done manually since the symptoms section for the symptoms page was created manually instead of through the code
+11. Go to the Firebase console, navigate to "Realtime Database", in the "Data" section, click the three vertical dots, click "Import JSON", select "Browse", and choose fullData.json
+12. The Firebase database should now be updated with your newly added treatment data
+
+EDITING TREATMENT VALUES
+This section is purely for editing values, for example subtracting one from the overall benefit and adverse of psych and seizure meds.
+For adding new treatments, go to the ADDING NEW TYPES OF TREATMENTS section
+1. Open fullData.csv in EXCEL
+2. Manually edit the values you want
+3. Before you run jsonConverter.py, you must first go into fullData.json, copy the first section listed as "symptoms", and keep it in your clipboard
+4. Run jsonConverter.py, the fullData.json file should now be updated, but without the symptoms section
+5. Paste the symptoms section into the fullData.json file at the top. This has to be done manually since the symptoms section for the symptoms page was created manually instead of through the code
+6. Go to the Firebase console, navigate to "Realtime Database", in the "Data" section, click the three vertical dots, click "Import JSON", select "Browse", and choose fullData.json
+7. The Firebase database should now be updated with your newly added treatment data
+
+DATABASE INTEGRATION IN APP
+The connection to the database is established in src/App.tsx This is done so a new connection doesn't have to be created for each page
+Examples of queries can be seen in src/pages/TreatmentList.tsx, src/pages/TreatmentPage.tsx
+
+TreatmentList/TreatmentPage Documentation:
+
+IMPLEMENTATION: 
+The current implementation: When the user clicks on the Treatments tab on the bottom of the app,
+the component src/pages/Treatments.tsx is brought up. This component contains visual Ionic components such as the Ionic segment, labels, etc. 
+This Treatments.tsx component also contains the component src/pages/TreatmentsList.tsx
+The TreatmentsList.tsx components is the actual list of all the Treatments currently in the database.
+Currently, all the treatments are listed at the same time when the user first enters the page, and once they select a filter in the segment, the Treatments are filtered depending on which option they selected.
+If a user clicks on a treatment diplayed in the TreatmentsList.tsx component, they are brought to the component src/pages/TreatmentPage.tsx
+The TreatmentsPage.tsx component dynamically displays information about the selected treatment using route props. 
+
+TREATMENTS.TSX:
+The majority of this component contains built-in Ionic components. 
+The Ionic segment is used to select which Treatments to filter by. 
+The selected value of the Ionic segment is then passed as props to the TreatmentList.tsx component to determine which type of Treatment to display.
+
+TREATMENTLIST.TSX: 
+This component utilizes hooks to create arrays and updates them after the Firebase query is called. 
+This component returns and IonItemGroup that displays the list of treatments based on which prop is passed into it. 
+The first Firebase query called is one that retrieves a list of all the treatments and stores it in an array. 
+The second Firebase query goes through this generated array, checks which type of treatment each one it is, and adds it to the corresponding array it belongs to (diet, psych and seizure, or nutritional supplement)
+Ultimately, the component check which prop is passed in by Treatments.tsx, takes the corresponding array, and maps it to an IonItemGroup to be displayed in Treatments.tsx
+
+TREATMENTPAGE.TSX:
+This component displays information about the selected treatment. 
+Using route props, the component pulls in the name of the treatment from the route, and stores it in a variable. 
+Using this variable, the component makes 3 Firebase queries. 
+The first query looks for the Treatment's overall benefit, and overall adverse values. 
+The component passes this value in to the StarRating plugin, as well as the Chart.js plugin to display the values in star rating and as a graph. 
+The star rating is calculated as such: (overall benefit - overall adverse) * 2, and this value is displayed out of stars
+The second query looks for the benefits for each symptom for that specific treatment, and passes it to Chart.js to display
+The third query looks for the adverse effects for each symptom for that specific treatment, and passes it to Chart.js to display
