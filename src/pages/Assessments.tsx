@@ -5,6 +5,7 @@ import './Assessments.css';
 const Assessments: React.FC = () => {
   return (
     <IonPage>
+      {/*Back button and Header*/}
       <IonHeader>
         <IonToolbar className="new-background-color">
           <IonButtons  slot="start">
@@ -13,7 +14,8 @@ const Assessments: React.FC = () => {
 		  <IonTitle style={{padding: '2px', color: 'var(--light-blue-1)', textAlign: "left", fontSize: 29, height: '65px'}}>Assessments</IonTitle>
         </IonToolbar>
       </IonHeader>
-      
+    
+    {/*Text and links can be inputted in this area*/}
 	  <IonContent fullscreen className="new-background-color-2">
         <IonHeader collapse="condense">
           <IonToolbar>

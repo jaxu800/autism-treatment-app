@@ -2,6 +2,7 @@
   "name": "autism-treatment-app",
   "version": "0.0.1",
   "private": true,
+  "proxy": "http://localhost:5000/",
   "dependencies": {
     "@capacitor/core": "2.4.7",
     "@ionic/react": "^5.5.0",

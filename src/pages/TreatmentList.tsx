@@ -2,6 +2,7 @@ import { IonItem, IonLabel, IonItemGroup  } from '@ionic/react';
 import { getDatabase, ref, get, child } from 'firebase/database'
 import React, { useState, useEffect, Component } from 'react';
 
+// This file gathers all treatments from the database and lists them in the Treatments page
 const TreatmentList: React.FC<{selectedValue:string}> = ({selectedValue}) => {
     
     const initArray: string[] = [];
@@ -16,8 +17,8 @@ const TreatmentList: React.FC<{selectedValue:string}> = ({selectedValue}) => {
       get(child(dbRef, `treatments`)).then((snapshot) => {
         if (snapshot.exists()) {
           snapshot.forEach((childSnapshot) => {
-          var key = childSnapshot.key;
-          treatmentList.push(String(childSnapshot.key));
+            var key = childSnapshot.key;
+            treatmentList.push(String(childSnapshot.key));
           });
           var nutraTemp:string[] = [];
           var psychTemp:string[] = [];
